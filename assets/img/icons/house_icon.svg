@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25.993" viewBox="0 0 26 25.993">
+    <defs>
+        <style>
+            .cls-1{fill:#c3cdd6}
+        </style>
+    </defs>
+    <g id="house" transform="translate(-.001 -.068)">
+        <g id="Group_328" data-name="Group 328" transform="translate(.001 .068)">
+            <g id="Group_327" data-name="Group 327">
+                <path id="Path_160" d="M25.994 11.312a2.27 2.27 0 0 0-.791-1.56l-2.249-1.927V2.347a.762.762 0 0 0-.762-.762h-3.047a.753.753 0 0 0-.752.762v1.56L14.539.622a2.273 2.273 0 0 0-2.972 0L.8 9.752a2.284 2.284 0 0 0-.247 3.223 2.309 2.309 0 0 0 2.506.666V25.3a.753.753 0 0 0 .752.762h18.381a.762.762 0 0 0 .762-.762V13.641a2.285 2.285 0 0 0 3.04-2.329zm-6.087-8.2h1.534v3.41l-1.534-1.309zm-3.8 21.43H9.9v-6.1h6.205zm5.332 0h-3.817v-6.859a.762.762 0 0 0-.762-.762H9.142a.753.753 0 0 0-.752.762v6.855H4.571V12.546l8.478-7.191 8.391 7.184v12zm2.853-12.555a.762.762 0 0 1-1.074.083l-9.671-8.295a.762.762 0 0 0-.988 0l-9.776 8.29a.762.762 0 0 1-.995-1.154l10.768-9.132a.758.758 0 0 1 .992 0l10.664 9.13a.763.763 0 0 1 .082 1.074z" class="cls-1" data-name="Path 160" transform="translate(-.001 -.068)"/>
+            </g>
+        </g>
+        <g id="Group_330" data-name="Group 330" transform="translate(9.914 9.202)">
+            <g id="Group_329" data-name="Group 329">
+                <path id="Path_161" d="M200.63 179.938h-4.672a.753.753 0 0 0-.751.762v4.57a.753.753 0 0 0 .751.762h4.672a.762.762 0 0 0 .762-.762v-4.57a.762.762 0 0 0-.762-.762zm-.752 4.57h-3.158v-3.047h3.159z" class="cls-1" data-name="Path 161" transform="translate(-195.207 -179.938)"/>
+            </g>
+        </g>
+        <g id="Group_332" data-name="Group 332" transform="translate(13.051 19.968)">
+            <g id="Group_331" data-name="Group 331">
+                <circle id="Ellipse_48" cx=".762" cy=".762" r=".762" class="cls-1" data-name="Ellipse 48"/>
+            </g>
+        </g>
+    </g>
+</svg>

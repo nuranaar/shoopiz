@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="game-controller" width="31.627" height="31.627" viewBox="0 0 31.627 31.627">
+    <defs>
+        <style>
+            .cls-1{fill:#c3cdd6}
+        </style>
+    </defs>
+    <path id="Path_163" d="M73.495 342.444h-1.854v2.165h-2.164v1.853h2.164v2.164h1.853v-2.164h2.164v-1.853h-2.163z" class="cls-1" data-name="Path 163" transform="translate(-65.185 -321.29)"/>
+    <path id="Path_164" d="M412.5 394.825h1.855v1.853H412.5z" class="cls-1" data-name="Path 164" transform="translate(-387.018 -370.436)"/>
+    <path id="Path_165" d="M342.443 394.825h1.857v1.853h-1.855z" class="cls-1" data-name="Path 165" transform="translate(-321.29 -370.436)"/>
+    <path id="Path_166" d="M377.472 334.777h1.855v1.853h-1.855z" class="cls-1" data-name="Path 166" transform="translate(-354.155 -314.097)"/>
+    <path id="Path_167" d="M271.012 334.777h1.855v1.853h-1.855z" class="cls-1" data-name="Path 167" transform="translate(-254.271 -314.097)"/>
+    <path id="Path_168" d="M210.964 334.777h1.855v1.853h-1.855z" class="cls-1" data-name="Path 168" transform="translate(-197.932 -314.097)"/>
+    <path id="Path_169" d="M24.245 16.862h-7.5v-1.237a1.239 1.239 0 0 1 1.237-1.237h4.1a3.09 3.09 0 1 0 0-6.181H9.547a1.237 1.237 0 0 1 0-2.474h4.1a3.094 3.094 0 0 0 3.09-3.09V0h-1.85v2.642a1.239 1.239 0 0 1-1.237 1.237h-4.1a3.09 3.09 0 0 0 0 6.181h12.531a1.237 1.237 0 1 1 0 2.474h-4.1a3.094 3.094 0 0 0-3.09 3.09v1.237h-7.5a7.383 7.383 0 1 0 5.774 11.984h5.315a7.383 7.383 0 1 0 5.774-11.984zm0 12.912a5.537 5.537 0 0 1-4.545-2.383l-.276-.4h-7.217l-.276.4a5.53 5.53 0 1 1-4.547-8.676h16.861a5.53 5.53 0 1 1 0 11.059z" class="cls-1" data-name="Path 169"/>
+</svg>

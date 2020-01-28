@@ -1,0 +1,66 @@
+.container {
+  @include mq("desktop", min) {
+    max-width: 1200px;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+p {
+  margin-bottom: 0;
+}
+body {
+  font-family: $base_font_family;
+}
+
+.select {
+  color: #fff;
+  position: relative;
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+  }
+  .select_top {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .dropdown_icon {
+      transition: all 0.3s;
+    }
+  }
+  .select_bottom {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transition: all 0.5s;
+    .select_list {
+      .select_item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &.active {
+    .overlay {
+      display: block;
+    }
+    .dropdown_icon {
+      transform: rotate(180deg);
+    }
+    .select_bottom {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28.313" height="32.397" viewBox="0 0 28.313 32.397">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:url(#linear-gradient-2)}.cls-3{fill:url(#linear-gradient-3)}.cls-4{fill:url(#linear-gradient-4)}
+        </style>
+        <linearGradient id="linear-gradient" x2="1" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#63be6b"/>
+            <stop offset=".506" stop-color="#5bbc6a"/>
+            <stop offset="1" stop-color="#4ab96a"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-2" x2=".999" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#3ec6f2"/>
+            <stop offset="1" stop-color="#45afe3"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-3" x2="1" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#faa51a"/>
+            <stop offset=".387" stop-color="#fab716"/>
+            <stop offset=".741" stop-color="#fac412"/>
+            <stop offset="1" stop-color="#fac80f"/>
+        </linearGradient>
+        <linearGradient id="linear-gradient-4" x2="1" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ec3b50"/>
+            <stop offset="1" stop-color="#e7515b"/>
+        </linearGradient>
+    </defs>
+    <g id="google-play-store" transform="translate(0 .001)">
+        <path id="Path_151" d="M18.161 9.874L1.041.089A.689.689 0 0 0 .347.1.685.685 0 0 0 0 .693s.007.9.014 2.387l12.47 12.47z" class="cls-1" data-name="Path 151"/>
+        <path id="Path_152" d="M.2 44.4c.021 5.357.083 18.362.111 24.837L12.677 56.87z" class="cls-2" data-name="Path 152" transform="translate(-.186 -41.32)"/>
+        <path id="Path_153" d="M195.282 147.9l-9.8-5.6-5.683 5.677 6.412 6.412 9.077-5.288a.694.694 0 0 0 .347-.6.7.7 0 0 0-.353-.601z" class="cls-3" data-name="Path 153" transform="translate(-167.323 -132.426)"/>
+        <path id="Path_154" d="M1.7 236.559c.014 2.311.021 3.789.021 3.789a.677.677 0 0 0 .347.6.689.689 0 0 0 .694 0l17.717-10.333-6.413-6.415z" class="cls-4" data-name="Path 154" transform="translate(-1.582 -208.643)"/>
+    </g>
+</svg>

@@ -1,0 +1,66 @@
+footer {
+  background-color: $footer_bg_color;
+  border-top: 2px solid $menu_card_border;
+  padding-bottom: 30px;
+  .footer-head {
+    margin-bottom: 20px;
+    border-bottom: 1px solid $menu_card_border;
+    padding: 52px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .download-btn {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      border-radius: 8px;
+      padding: 14px 24px;
+      color: #fff;
+      background-color: $dark_teal_three;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.23;
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
+  .lists {
+    .list {
+      width: calc(100% / 5);
+    }
+  }
+}
+.lists {
+  padding: 48px 0 60px;
+  display: flex;
+  .list {
+    margin-right: 80px;
+    width: 100%;
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.22;
+      text-align: left;
+      color: $dark-teal-three;
+      margin-bottom: 18px;
+    }
+    ul {
+      li {
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 1.94;
+        text-align: left;
+        a {
+          color: $footer_text;
+          transition: all 0.3s;
+          &:hover {
+            font-weight: bold;
+            color: $dark_seconr_color;
+          }
+        }
+      }
+    }
+  }
+}
