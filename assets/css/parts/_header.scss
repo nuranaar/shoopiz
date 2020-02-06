@@ -1,4 +1,4 @@
-header {
+.main-header {
   height: 520px;
   background-image: url(../img/header-bg-img.svg);
   background-repeat: no-repeat;
@@ -6,7 +6,9 @@ header {
   position: relative;
   .header {
     padding-top: 60px;
-    // width: 100%;
+    .scroll-logo {
+      display: none;
+    }
     .lang {
       margin-left: 48px;
       p {
@@ -76,27 +78,80 @@ header {
       line-height: 1.19;
       max-width: 420px;
       margin-top: 16px;
+      margin-bottom: 32px;
+    }
+  }
+  &.scroll-header {
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+    height: fit-content;
+    background-color: #fff;
+    background-image: none;
+    box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.05);
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header {
+      padding: 32px 0;
+      .scroll-logo {
+        display: block;
+      }
+      .logo,
+      .lang,
+      .login-with-fb {
+        display: none;
+      }
+    }
+    .header-search {
+      padding: 32px 0;
+      .title,
+      .info {
+        display: none;
+      }
+      .search-form input {
+        border: solid 1px $menu_card_border_opacity;
+      }
     }
   }
 }
+.second-header {
+  height: fit-content;
+  background-color: #fff;
+  background-image: none;
+  box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.05);
+  .header {
+    padding: 32px 0 24px;
+  }
+  .header-search {
+    .search-form input {
+      border: solid 1px $menu_card_border_opacity;
+    }
+  }
+  #nav-menu .menu-button .all-categories {
+    background-color: $menu_card_border;
+  }
+}
 .search-form {
-  margin-top: 42px;
+  min-width: 450px;
   max-width: 550px;
   display: flex;
   position: relative;
   input {
-    margin-bottom: 24px;
     width: 100%;
     border: none;
-    padding: 28px 40px;
+    padding: 28px 36px;
     border-radius: 8px 0 0 8px;
+    outline: transparent;
     &::placeholder {
       font-size: 16px;
       font-weight: 600;
+      color: $pinkish_grey;
     }
   }
   .search-btn {
-    margin-bottom: 24px;
     border-radius: 0 8px 8px 0;
     border: none;
     padding: 28px 40px;
@@ -200,6 +255,7 @@ header {
   }
 }
 .page {
+  // padding-top: 100px;
   position: relative;
   .search-overlay {
     display: none;

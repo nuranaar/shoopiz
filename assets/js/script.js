@@ -54,4 +54,20 @@ $(document).ready(function () {
     });
 
     //#endregion
+
+    //#region 
+    var previousScroll = 0;
+
+    $(window).scroll(function () {
+        var currentScroll = $(this).scrollTop();
+        if (currentScroll > 600) {
+            console.log('down');
+            $('header').addClass('scroll-header')
+        } else {
+            console.log('up');
+            $('header').removeClass('scroll-header')
+        }
+        // previousScroll = currentScroll;
+    });
+    //#endregion
 });
