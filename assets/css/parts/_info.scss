@@ -1,0 +1,21 @@
+#info-page {
+    .page-content{
+        margin: 64px 15px;
+    }
+  .info-title {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    color: $dark_seconr_color;
+    padding: 15px 0;
+  }
+  .text {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.77;
+    text-align: left;
+    color: #000000;
+    padding: 24px 0;
+  }
+}
