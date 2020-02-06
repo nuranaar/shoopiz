@@ -1,0 +1,116 @@
+#search-properties {
+  border-bottom: solid 1px $menu_card_border_opacity;
+  .properties-list {
+    margin: 48px 0;
+    display: flex;
+    justify-content: space-between;
+    .property-title {
+      padding: 18px 0;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.19;
+      text-align: left;
+      color: $dark_teal_three;
+    }
+    .more,
+    .multiple-select {
+      padding: 5px 0;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.19;
+      text-align: left;
+      color: $dark_teal_three;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover {
+        color: $dark_seconr_color;
+        text-decoration: underline;
+        .left-arrow {
+          fill: $dark_seconr_color;
+        }
+      }
+    }
+    .property-values {
+      margin-bottom: 10px;
+      .property-value {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 2.31;
+        text-align: left;
+        color: $dark_teal_three;
+        cursor: pointer;
+        transition: all 0.3s;
+        .count {
+          color: $blue_green;
+        }
+        &:hover {
+          color: $blue_green;
+          text-decoration-line: underline;
+        }
+      }
+    }
+    .more-filters {
+      border-radius: 8px;
+      padding: 0 24px;
+      border: solid 1px $menu_card_border;
+      max-height: 210px;
+      .property-title {
+        color: $blue_green;
+      }
+    }
+  }
+}
+
+#product-list-filter {
+}
+
+#product-list {
+}
+
+#multiple-select {
+  #property-list {
+    column-count: 3;
+    margin-top: 24px;
+    label {
+      width: 100%;
+      input {
+        display: none;
+      }
+      input:checked + .label {
+        .checkbox {
+          background-color: $darken_blue_green;
+          border-color: $darken_blue_green;
+        }
+        p {
+          color: $blue_green;
+          font-weight: bold;
+        }
+      }
+      .label {
+        display: flex;
+        align-items: baseline;
+      }
+      .checkbox {
+        width: 16px;
+        height: 16px;
+        border-radius: 3px;
+        border: solid 1px #e1e6ea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+      }
+      p {
+        margin-left: 8px;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.23;
+        text-align: left;
+        color: $dark_teal_three;
+        span {
+          color: $blue_green;
+        }
+      }
+    }
+  }
+}
