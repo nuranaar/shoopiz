@@ -55,9 +55,7 @@ $(document).ready(function () {
 
     //#endregion
 
-    //#region 
-    var previousScroll = 0;
-
+    //#region HEAHER ON SCROLL
     $(window).scroll(function () {
         var currentScroll = $(this).scrollTop();
         if (currentScroll > 600) {
@@ -67,7 +65,16 @@ $(document).ready(function () {
             console.log('up');
             $('header').removeClass('scroll-header')
         }
-        // previousScroll = currentScroll;
     });
     //#endregion
+
+    //#region MODAL
+    $('.multiple-select').click(function () {
+        $('#multiple-select').addClass('show');
+    });
+    $('.fixed_modal .overlay').click(function () {
+        $(this).parent().removeClass('show')
+    })
+    //#endregion
+
 });

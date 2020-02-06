@@ -64,3 +64,34 @@ body {
     }
   }
 }
+
+.selected_filter_list {
+  .item {
+    padding: 10px 11px;
+    border-radius: 8px;
+    background-color: $menu_card_border_opacity;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.85;
+    text-align: left;
+    color: $dark_teal_three;
+    .delete {
+      margin-left: 11px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: $menu_card_border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      &:hover{
+        background-color: $dark_seconr_color;
+      }
+    }
+  }
+}

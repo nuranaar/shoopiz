@@ -86,6 +86,50 @@ body {
   opacity: 1;
 }
 
+.selected_filter_list .item {
+  padding: 10px 11px;
+  border-radius: 8px;
+  background-color: #c3cdd680;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.85;
+  text-align: left;
+  color: #033e46;
+}
+
+.selected_filter_list .item .delete {
+  margin-left: 11px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #c3cdd6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.selected_filter_list .item .delete:hover {
+  background-color: #ee9221;
+}
+
 .main-header {
   height: 520px;
   background-image: url(../img/header-bg-img.svg);
@@ -976,6 +1020,40 @@ footer .lists .list {
   color: #15a79e;
 }
 
+#multiple-select .modal-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 80px;
+}
+
+#multiple-select .buttons button {
+  border: none;
+  background-color: transparent;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  padding: 14px 28px;
+  border-radius: 12px;
+}
+
+#multiple-select .buttons .btn-close-modal {
+  color: #ee9221;
+  text-decoration: underline;
+}
+
+#multiple-select .buttons .btn-apply {
+  color: #fff;
+  background-color: #0e9f96;
+}
+
 .fixed_modal {
   position: fixed;
   top: 0;
@@ -983,15 +1061,19 @@ footer .lists .list {
   z-index: 111;
   width: 100vw;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
+}
+
+.fixed_modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .fixed_modal .overlay {
