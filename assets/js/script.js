@@ -154,5 +154,18 @@ $(document).ready(function () {
     }
     //#endregion
 
+    //#region PRODUCT VIEW
+    $('.view .product-view').click(function () {
+        $('#product-list').fadeOut()
+        $('#product-list').removeClass()
+        $('#product-list').addClass($(this).data('id'));
+        $('#product-list').fadeIn()
+        $('#product-list .product').parent().removeClass();
+        $('.list_view .product').parent().addClass('col-lg-12');
+        $('.table_view .product').parent().addClass('col-lg-3 col-md-6 col-sm-12');
+
+
+    })
+    //#endregion
 
 });

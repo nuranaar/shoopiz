@@ -5,6 +5,10 @@
 }
 #looking {
   margin-bottom: 32px;
+  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 #products {
   text-align: center;
@@ -28,7 +32,7 @@
     background-color: $btn_color;
     text-decoration: none;
     font-size: 13px;
-  font-weight: bold;
-  line-height: 1.23;
+    font-weight: bold;
+    line-height: 1.23;
   }
 }
