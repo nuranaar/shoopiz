@@ -168,4 +168,17 @@ $(document).ready(function () {
     })
     //#endregion
 
+    //#region SINGLE PRODUNCT PAGE CONTENT
+    // $(`.page-content`).first().fadeIn();
+    $(`.page-content#price_history`).first().fadeIn();
+    $('.page-list .page-item').click(function () {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $(`.page-content`).fadeOut(300);
+        setTimeout(() => {
+            $(`.page-content${$(this).data('id')}`).fadeIn();
+        }, 300);
+    })
+    //#endregion
+
 });
