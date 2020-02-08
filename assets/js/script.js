@@ -59,9 +59,11 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var currentScroll = $(this).scrollTop();
         if (currentScroll > 600) {
-            $('header').addClass('scroll-header')
+            $('header').addClass('scroll-header');
+            $('#home-page').addClass('page-onscroll')
         } else {
             $('header').removeClass('scroll-header')
+            $('#home-page').removeClass('page-onscroll')
         }
     });
     //#endregion
@@ -156,15 +158,13 @@ $(document).ready(function () {
 
     //#region PRODUCT VIEW
     $('.view .product-view').click(function () {
-        $('#product-list').fadeOut()
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
         $('#product-list').removeClass()
         $('#product-list').addClass($(this).data('id'));
-        $('#product-list').fadeIn()
         $('#product-list .product').parent().removeClass();
         $('.list_view .product').parent().addClass('col-lg-12');
         $('.table_view .product').parent().addClass('col-lg-3 col-md-6 col-sm-12');
-
-
     })
     //#endregion
 
