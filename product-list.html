@@ -780,21 +780,36 @@
         <div class="search-overlay"></div>
         <!--#region MAIN  -->
         <main>
+            <!-- #region FILTER -->
             <section id="search-properties">
                 <div class="container">
                     <ul class="properties-list">
-                        <li class="property">
+                        <li class="property" data-prop_id='property-id-1'>
                             <p class="property-title">Screen</p>
                             <ul class="property-values">
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">5.5 inch <span class="count">(2)</span> </li>
-                                <li class="property-value">7.2 inch <span class="count">(5)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class="label"> 6.1 inch <span class="count">(44)</span></div>
+                                    </label>
+                                </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="5.5 inch" type="checkbox">
+                                        <div class="label"> 5.5 inch <span class="count">(2)</span></div>
+                                    </label>
+                                </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class="label"> 6.1 inch <span class="count">(44)</span></div>
+                                    </label>
+                                </li>
                             </ul>
 
                             <div class="more">More...</div>
-                            <div data-id='#multiple-select' class="fixed_modal_show multiple-select">Multiple choise
+                            <div data-id='#multiple-select' data-prop_id='property-id-1'
+                                class="multiple_select_modal_show multiple-select">Multiple choise
                                 <span class="left">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="6.604" height="11.241"
                                         viewBox="0 0 6.604 11.241">
@@ -807,45 +822,92 @@
                                 </span></div>
 
                         </li>
-                        <li class="property">
+                        <li class="property" data-prop_id='property-id-2'>
                             <p class="property-title">Storage</p>
                             <ul class="property-values">
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class="label"> 6.1 inch <span class="count">(44)</span></div>
+                                    </label>
+                                </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class="label"> 6.1 inch <span class="count">(44)</span></div>
+                                    </label>
+                                </li>
                             </ul>
                         </li>
-                        <li class="property">
+                        <li class="property" data-prop_id='property-id-3'>
                             <p class="property-title">RAM</p>
                             <ul class="property-values">
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">5.5 inch <span class="count">(2)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="5.5 inch" type="checkbox">
+                                        <div class="label"> 5.5 inch <span class="count">(2)</span></div>
+                                    </label>
+                                </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class="label"> 6.1 inch <span class="count">(44)</span></div>
+                                    </label>
+                                </li>
                             </ul>
                         </li>
-                        <li class="property">
+                        <li class="property" data-prop_id='property-id-4'>
                             <p class="property-title">Battery</p>
                             <ul class="property-values">
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">5.5 inch <span class="count">(2)</span> </li>
-                                <li class="property-value">7.2 inch <span class="count">(5)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class="label"> 6.1 inch <span class="count">(44)</span></div>
+                                    </label>
+                                </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class="label"> 6.1 inch <span class="count">(44)</span></div>
+                                    </label>
+                                </li>
                             </ul>
                         </li>
-                        <li class="property">
+                        <li class="property" data-prop_id='property-id-5'>
                             <p class="property-title">Operating System</p>
                             <ul class="property-values">
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
-                                <li class="property-value">6.1 inch <span class="count">(44)</span> </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class=" label"> 6.1 inch <span class=" count">(44)</span>
+                                        </div>
+
+                                    </label>
+                                </li>
+                                <li class="property-value">
+                                    <label>
+                                        <input value="6.1 inch" type="checkbox">
+                                        <div class=" label"> 6.1 inch <span class=" count">(44)</span>
+                                        </div>
+
+                                    </label>
+                                </li>
                             </ul>
                         </li>
                         <li class="more-filters">
                             <p class="property-title">More Filters</p>
                             <ul class="property-values">
-                                <li class="property-value">Operating System </li>
-                                <li class="property-value">Battery Health </li>
-                                <li class="property-value">Colors </li>
+                                <li data-id="#multiple-select" data-prop_id='property-id-6'
+                                    class="multiple_select_modal_show property">
+                                    Operating System
+                                </li>
+                                <li data-id="#multiple-select" data-prop_id='property-id-7'
+                                    class="multiple_select_modal_show property">
+                                    Battery Health
+                                </li>
+                                <li data-id="#multiple-select" data-prop_id='property-id-8'
+                                    class="multiple_select_modal_show property">
+                                    Colors </li>
                             </ul>
                         </li>
                     </ul>
@@ -856,6 +918,9 @@
                     </div>
                 </div>
             </section>
+            <!-- #endregion -->
+
+            <!-- #region PRODUCT LIST -->
             <div class="container">
                 <sectoin id="product-list-filter" class="d-flex justify-content-between align-items-center">
                     <div class="d-flex">
@@ -1105,6 +1170,7 @@
 
                 </sectoin>
             </div>
+            <!--#endregion -->
 
         </main>
         <!--#endregion -->
@@ -1158,9 +1224,8 @@
                     <div class="modal_title">Select multiple filters</div>
                     <div id="property-list">
 
-                        <label for="value-id-1">
-                            <input type="checkbox" name="value-id-1" id="value-id-1" value="6.1 inch">
-
+                        <label>
+                            <input type="checkbox" value="6.1 inch">
                             <div class="label">
                                 <div class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8.379"
                                         viewBox="0 0 8 8.379">
@@ -1184,10 +1249,8 @@
                                 <p>6.1 inch <span> (44)</span></p>
                             </div>
                         </label>
-
-                        <label for="value-id-2">
-                            <input type="checkbox" name="value-id-2" id="value-id-2" value="5.5 inch">
-
+                        <label>
+                            <input type="checkbox" value="5.5 inch">
                             <div class="label">
                                 <div class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8.379"
                                         viewBox="0 0 8 8.379">
@@ -1211,9 +1274,8 @@
                                 <p>5.5 inch <span> (2)</span></p>
                             </div>
                         </label>
-
-                        <label for="value-id-3">
-                            <input type="checkbox" name="value-id-3" id="value-id-3" value="7.2 inch">
+                        <label>
+                            <input type="checkbox" value="7.2 inch">
                             <div class="label">
                                 <div class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8.379"
                                         viewBox="0 0 8 8.379">
@@ -1237,9 +1299,8 @@
                                 <p>7.2 inch <span> (5)</span></p>
                             </div>
                         </label>
-
-                        <label for="value-id-4">
-                            <input type="checkbox" name="value-id-4" id="value-id-4" value="6.1 inch">
+                        <label>
+                            <input type="checkbox" value="6.1 inch">
                             <div class="label">
                                 <div class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8.379"
                                         viewBox="0 0 8 8.379">
@@ -1263,9 +1324,8 @@
                                 <p>6.1 inch <span> (44)</span></p>
                             </div>
                         </label>
-
-                        <label for="value-id-5">
-                            <input type="checkbox" name="value-id-5" id="value-id-5" value="6.1 inch">
+                        <label>
+                            <input type="checkbox" value="6.1 inch">
                             <div class="label">
                                 <div class="checkbox"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8.379"
                                         viewBox="0 0 8 8.379">
@@ -1292,7 +1352,6 @@
                     </div>
                     <div class="modal_bottom">
                         <ul class="selected_filter_list">
-
                         </ul>
                         <div class="buttons">
                             <button class="modal_close btn-close-modal" type="button">Close</button>

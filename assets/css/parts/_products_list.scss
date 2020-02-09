@@ -21,6 +21,8 @@
       text-align: left;
       color: $dark_teal_three;
       transition: all 0.3s;
+    }
+    .multiple-select {
       cursor: pointer;
       &:hover {
         color: $dark_seconr_color;
@@ -32,7 +34,13 @@
     }
     .property-values {
       margin-bottom: 10px;
-      .property-value {
+      input {
+        display: none;
+      }
+      input:checked + .label {
+        font-weight: bold;
+      }
+      .property-value .label {
         font-size: 13px;
         font-weight: 500;
         line-height: 2.31;
@@ -56,6 +64,18 @@
       max-height: 210px;
       .property-title {
         color: $blue_green;
+      }
+      .property {
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 2.31;
+        color: $dark_teal_three;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          color: $blue_green;
+          text-decoration-line: underline;
+        }
       }
     }
   }
@@ -329,6 +349,8 @@
         }
       }
     }
-    
+  }
+  .modal_bottom {
+    margin-top: 40px;
   }
 }

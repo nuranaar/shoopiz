@@ -938,16 +938,17 @@ footer .lists .list {
   color: #033e46;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+#search-properties .properties-list .multiple-select {
   cursor: pointer;
 }
 
-#search-properties .properties-list .more:hover,
 #search-properties .properties-list .multiple-select:hover {
   color: #ee9221;
   text-decoration: underline;
 }
 
-#search-properties .properties-list .more:hover .left-arrow,
 #search-properties .properties-list .multiple-select:hover .left-arrow {
   fill: #ee9221;
 }
@@ -956,7 +957,15 @@ footer .lists .list {
   margin-bottom: 10px;
 }
 
-#search-properties .properties-list .property-values .property-value {
+#search-properties .properties-list .property-values input {
+  display: none;
+}
+
+#search-properties .properties-list .property-values input:checked + .label {
+  font-weight: bold;
+}
+
+#search-properties .properties-list .property-values .property-value .label {
   font-size: 13px;
   font-weight: 500;
   line-height: 2.31;
@@ -967,11 +976,11 @@ footer .lists .list {
   transition: all 0.3s;
 }
 
-#search-properties .properties-list .property-values .property-value .count {
+#search-properties .properties-list .property-values .property-value .label .count {
   color: #15a79e;
 }
 
-#search-properties .properties-list .property-values .property-value:hover {
+#search-properties .properties-list .property-values .property-value .label:hover {
   color: #15a79e;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -986,6 +995,22 @@ footer .lists .list {
 
 #search-properties .properties-list .more-filters .property-title {
   color: #15a79e;
+}
+
+#search-properties .properties-list .more-filters .property {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 2.31;
+  color: #033e46;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#search-properties .properties-list .more-filters .property:hover {
+  color: #15a79e;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 #search-properties .head_filter {
@@ -1314,6 +1339,10 @@ footer .lists .list {
 
 #multiple-select #property-list label p span {
   color: #15a79e;
+}
+
+#multiple-select .modal_bottom {
+  margin-top: 40px;
 }
 
 .fixed_modal {

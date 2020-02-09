@@ -69,12 +69,16 @@ $(document).ready(function () {
     //#endregion
 
     //#region MODAL
+    $('.multiple_select_modal_show').click(function () {
+        $($(this).data('id')).addClass('show');
+        $($(this).data('id')).attr('data-prop_id', $(this).data('prop_id'));
+    });
     $('.fixed_modal_show').click(function () {
         $($(this).data('id')).addClass('show');
     });
     $('.fixed_modal .modal_close').click(function () {
         $(this).parents(".fixed_modal").removeClass('show');
-        resetMultipleSelectModal()
+        resetModalOnClose();
     })
     //#endregion
 
@@ -86,17 +90,16 @@ $(document).ready(function () {
         const value = $(this).val();
         if ($(this).is(":checked")) {
             multiple_select_items.push(value);
-            AddItemToFilterList(multiple_select_items, '.modal-bottom .selected_filter_list')
+            AddItemToFilterList(multiple_select_items, '.modal_bottom .selected_filter_list')
         }
         else {
-            multiple_select_items = DeleteFromArray(value, multiple_select_items);
-            AddItemToFilterList(multiple_select_items, '.modal-bottom .selected_filter_list')
+            multiple_select_items = DeleteFromArray(value, multiple_select_items, '.modal_bottom .selected_filter_list')
         }
     })
 
     $(document).on('click', '.item .delete', function () {
         const value = $(this).prev().text().trim();
-        multiple_select_items = DeleteFromArray(value, multiple_select_items, '.modal-bottom .selected_filter_list');
+        multiple_select_items = DeleteFromArray(value, multiple_select_items, '.modal_bottom .selected_filter_list');
         head_filter_select_items = DeleteFromArray(value, head_filter_select_items, '.head_filter .selected_filter_list');
         $('#property-list input').map((index, item) => {
             item.value == value ?
@@ -109,11 +112,68 @@ $(document).ready(function () {
 
     $('.btn-apply').click(function () {
         head_filter_select_items = [...multiple_select_items];
-        // resetMultipleSelectModal();
         AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list');
         $('.fixed_modal .modal_close').click();
+        $(`.property[data-prop_id='${$('.fixed_modal').data('prop_id')}'`).fadeOut();
     })
 
+
+
+    $('.property .property-value input[type="checkbox"]').change(function () {
+        const value = $(this).val();
+        if ($(this).is(":checked")) {
+            $(this).parents('.property-value').siblings().find('input[type="checkbox"]').prop('checked', false);
+            head_filter_select_items.push(value);
+            AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list')
+            $(this).parents('.property').fadeOut()
+        }
+        else {
+            head_filter_select_items = DeleteFromArray(value, head_filter_select_items, '.head_filter .selected_filter_list');
+            $(this).prop('checked', false)
+        }
+    })
+
+    //#endregion
+
+    //#region PRODUCT VIEW
+    $('.view .product-view').click(function () {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $('#product-list').removeClass()
+        $('#product-list').addClass($(this).data('id'));
+        $('#product-list .product').parent().removeClass();
+        $('.list_view .product').parent().addClass('col-lg-12');
+        $('.table_view .product').parent().addClass('col-lg-3 col-md-6 col-sm-12');
+    })
+    //#endregion
+
+    //#region SINGLE PRODUNCT PAGE CONTENT
+
+    $(`.page-content`).first().fadeIn();
+    $('.page-list .page-item').click(function () {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        $(`.page-content`).fadeOut(300);
+        setTimeout(() => {
+            $(`.page-content${$(this).data('id')}`).fadeIn();
+        }, 300);
+    })
+
+    //#endregion
+
+    //#region SELECT STARS
+
+    $('.select-stars li').click(function () {
+        $(this).siblings().removeClass('selected');
+        $(this).prevAll().addClass('selected');
+        $(this).addClass('selected');
+        starCount()
+    });
+
+
+    //#endregion
+
+    //#region FUNCTIONS
     function AddItemToFilterList(array, selector) {
         $(selector).empty();
         array.map(item => {
@@ -149,48 +209,15 @@ $(document).ready(function () {
         return new_array;
     }
 
-    function resetMultipleSelectModal() {
+    function resetModalOnClose() {
         multiple_select_items = [];
-        $('.modal-bottom .selected_filter_list').empty();
-        $('#multiple-select input').prop('checked', false);
+        $('.modal_bottom .selected_filter_list').empty();
+        $('.fixed_modal input').prop('checked', false);
+        $('.fixed_modal input, .fixed_modal textarea').val('');
+        $('.select-stars li').removeClass('selected');
+        starCount();
     }
-    //#endregion
 
-    //#region PRODUCT VIEW
-    $('.view .product-view').click(function () {
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        $('#product-list').removeClass()
-        $('#product-list').addClass($(this).data('id'));
-        $('#product-list .product').parent().removeClass();
-        $('.list_view .product').parent().addClass('col-lg-12');
-        $('.table_view .product').parent().addClass('col-lg-3 col-md-6 col-sm-12');
-    })
-    //#endregion
-
-    //#region SINGLE PRODUNCT PAGE CONTENT
-
-    // $(`.page-content`).first().fadeIn();
-    $(`.page-content#reviews`).first().fadeIn();
-    $('.page-list .page-item').click(function () {
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        $(`.page-content`).fadeOut(300);
-        setTimeout(() => {
-            $(`.page-content${$(this).data('id')}`).fadeIn();
-        }, 300);
-    })
-
-    //#endregion
-
-    //#region SELRCT STARS
-
-    $('.select-stars li').click(function () {
-        $(this).siblings().removeClass('selected');
-        $(this).prevAll().addClass('selected');
-        $(this).addClass('selected');
-        starCount()
-    });
     function starCount() {
         let count = $('.select-stars li.selected').length;
         let label;
@@ -210,8 +237,8 @@ $(document).ready(function () {
             case 5:
                 label = 'Very good';
                 break;
-
             default:
+                label = '';
                 break;
         }
         $('input[name="stars"]').val(count);
