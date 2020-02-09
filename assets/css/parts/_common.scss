@@ -14,7 +14,16 @@ p {
 body {
   font-family: $base_font_family;
 }
-
+.cls-1 {
+  transition: all 0.3s;
+}
+.btn {
+  &:focus,
+  &:active {
+    outline: transparent;
+    box-shadow: none;
+  }
+}
 .select {
   color: #fff;
   position: relative;
@@ -47,7 +56,6 @@ body {
     width: 100%;
     .select_list {
       .select_item {
-        
         cursor: pointer;
         display: flex;
         align-items: center;

@@ -36,5 +36,40 @@
       text-align: left;
       color: $dark_teal_three;
     }
+    .modal_info {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.29;
+      color: $dark_teal_three;
+      margin: 12px 0;
+    }
+    .modal_bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .buttons {
+      margin-top: 12px;
+      margin-left: auto;
+      width: fit-content;
+      button {
+        border: none;
+        background-color: transparent;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1;
+        text-align: center;
+        padding: 16px 28px;
+        border-radius: 12px;
+      }
+      .btn-close-modal {
+        color: $dark_seconr_color;
+        text-decoration: underline;
+      }
+      .btn-apply {
+        color: #fff;
+        background-color: $darken_blue_green;
+      }
+    }
   }
 }

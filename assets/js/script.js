@@ -69,8 +69,8 @@ $(document).ready(function () {
     //#endregion
 
     //#region MODAL
-    $('.multiple-select').click(function () {
-        $('#multiple-select').addClass('show');
+    $('.fixed_modal_show').click(function () {
+        $($(this).data('id')).addClass('show');
     });
     $('.fixed_modal .modal_close').click(function () {
         $(this).parents(".fixed_modal").removeClass('show');
@@ -169,8 +169,9 @@ $(document).ready(function () {
     //#endregion
 
     //#region SINGLE PRODUNCT PAGE CONTENT
+
     // $(`.page-content`).first().fadeIn();
-    $(`.page-content#price_history`).first().fadeIn();
+    $(`.page-content#reviews`).first().fadeIn();
     $('.page-list .page-item').click(function () {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
@@ -179,6 +180,46 @@ $(document).ready(function () {
             $(`.page-content${$(this).data('id')}`).fadeIn();
         }, 300);
     })
+
+    //#endregion
+
+    //#region SELRCT STARS
+
+    $('.select-stars li').click(function () {
+        $(this).siblings().removeClass('selected');
+        $(this).prevAll().addClass('selected');
+        $(this).addClass('selected');
+        starCount()
+    });
+    function starCount() {
+        let count = $('.select-stars li.selected').length;
+        let label;
+        switch (count) {
+            case 1:
+                label = 'Very bad';
+                break;
+            case 2:
+                label = 'Bad';
+                break;
+            case 3:
+                label = 'Normal';
+                break;
+            case 4:
+                label = 'Good';
+                break;
+            case 5:
+                label = 'Very good';
+                break;
+
+            default:
+                break;
+        }
+        $('input[name="stars"]').val(count);
+        $('.star-count span').text(count);
+        $('.label').text(label);
+
+    }
+
     //#endregion
 
 });
