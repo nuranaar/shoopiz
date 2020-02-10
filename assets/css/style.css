@@ -582,6 +582,7 @@ body {
 }
 
 #nav-menu .menu-cards .menu-card {
+  cursor: pointer;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
@@ -1642,6 +1643,7 @@ footer .list {
 }
 
 .page-list .page-item {
+  cursor: pointer;
   margin-left: 18px;
   padding: 13px;
   min-width: 124px;

@@ -7,6 +7,7 @@
     align-items: center;
     position: relative;
     .menu-card {
+      cursor: pointer;
       width: min-content;
       margin: 17px 0;
       margin-right: 20px;
@@ -100,7 +101,7 @@
       .lists {
         width: calc(100% / 3 * 2);
         .list {
-            display: none;
+          display: none;
           margin-left: 60px;
           ul {
             column-count: 2;

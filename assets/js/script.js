@@ -219,6 +219,7 @@ $(document).ready(function () {
     }
 
     function starCount() {
+        debugger;
         let count = $('.select-stars li.selected').length;
         let label;
         switch (count) {
@@ -243,7 +244,7 @@ $(document).ready(function () {
         }
         $('input[name="stars"]').val(count);
         $('.star-count span').text(count);
-        $('.label').text(label);
+        $('.select-stars .label').text(label);
 
     }
 
