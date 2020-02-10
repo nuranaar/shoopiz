@@ -2,6 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 32px;
+  div {
+    @include mq("tablet", max) {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
 #looking {
   margin-bottom: 32px;
@@ -15,8 +23,11 @@
   margin-bottom: 32px;
   .products-list {
     display: flex;
-    .product {
-      width: calc(100% / 3);
+    @include mq("phone-wide", max) {
+      display: block;
+    }
+    li {
+      width: 100%;
       img {
         width: 100%;
         height: 100%;

@@ -2,6 +2,9 @@ footer {
   background-color: $footer_bg_color;
   border-top: 1px solid $menu_card_border;
   padding-bottom: 30px;
+  @include mq("tablet", max) {
+    text-align: center;
+  }
   .footer-head {
     margin-bottom: 20px;
     border-bottom: 1px solid $menu_card_border_opacity;
@@ -9,7 +12,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mq("tablet", max) {
+      display: block;
+    }
     .download-btn {
+      @include mq("tablet", max) {
+        margin: 32px auto 0;
+      }
       display: flex;
       align-items: center;
       width: fit-content;
@@ -26,39 +35,39 @@ footer {
       }
     }
   }
-  .lists {
-    .list {
-      width: calc(100% / 5);
+  .list {
+    max-width: 100%;
+    @include mq("tablet", max) {
+      margin-bottom: 20px;
     }
   }
 }
 .lists {
   padding: 48px 0 60px;
   display: flex;
-  .list {
-    margin-right: 80px;
-    width: 100%;
-    p {
+}
+.list {
+  margin-right: 80px;
+  width: 100%;
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.22;
+    color: $dark-teal-three;
+    margin-bottom: 18px;
+  }
+  ul {
+    li {
       font-size: 18px;
-      font-weight: bold;
-      line-height: 1.22;
-      text-align: left;
-      color: $dark-teal-three;
-      margin-bottom: 18px;
-    }
-    ul {
-      li {
-        font-size: 18px;
-        font-weight: normal;
-        line-height: 1.94;
-        text-align: left;
-        a {
-          color: $footer_text;
-          transition: all 0.3s;
-          &:hover {
-            font-weight: bold;
-            color: $dark_seconr_color;
-          }
+      font-weight: normal;
+      line-height: 1.94;
+      a {
+        max-width: 100%;
+        color: $footer_text;
+        transition: all 0.3s;
+        &:hover {
+          font-weight: bold;
+          color: $dark_seconr_color;
         }
       }
     }
