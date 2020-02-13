@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   position: relative;
+  @include mq("tablet", max) {
+    display: none;
+  }
   .menu-cards {
     display: flex;
     align-items: center;
@@ -18,7 +21,9 @@
       display: flex;
       align-items: center;
       .icon {
-        min-height: 50px;
+        svg {
+          height: 48px;
+        }
         .cls-1 {
           transition: all 0.3s;
           fill: $icon;
@@ -160,6 +165,56 @@
           border-radius: 2px;
           background-color: #0e9f96;
         }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  padding-bottom: 12px;
+  position: absolute;
+  top: -22%;
+  background-color: #fff;
+  width: 100%;
+  left: 0;
+  display: none;
+  .menu-item {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    .icon svg {
+      width: 26px;
+      height: 26px;
+    }
+    .title {
+      transition: all 0.3s;
+      color: $dark_teal_two;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.23;
+      margin: 0 18px;
+      width: fit-content;
+    }
+    .toggle-icon {
+      transition: all 0.3s;
+    }
+    &.active {
+      .icon {
+        .cls-1 {
+          fill: $blue_green;
+        }
+      }
+      .toggle-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .sub-menu {
+    display: none;
+    padding: 0 40px;
+    .list {
+      li {
+        font-size: 14px;
       }
     }
   }

@@ -3,8 +3,14 @@
   background-image: url(../img/header-bg-img.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   position: relative;
+  @include mq("tablet-wide", max) {
+    background-image: url(../img/mobile-bg.svg);
+    height: 460px;
+  }
   @include mq("phone-wide", max) {
+    height: 360px;
     background-image: none;
     background-color: $dark_teal;
   }
@@ -12,10 +18,14 @@
     padding-top: 60px;
     @include mq("phone-wide", max) {
       padding-top: 30px;
+      .logo img {
+        width: 90px;
+      }
     }
     .scroll-logo {
       display: none;
     }
+
     .lang {
       margin-left: 48px;
       p {
@@ -23,10 +33,19 @@
         padding: 8px;
         padding-right: 16px;
       }
+      @include mq("phone-wide", max) {
+        margin-left: 24px;
+        p {
+          padding: 4px 8px;
+        }
+      }
       .select_top {
         padding: 8px 16px;
         background-color: $lang_bg;
         border-radius: 8px;
+        @include mq("phone-wide", max) {
+          padding: 8px;
+        }
         .select_text {
           font-size: 12px;
           font-weight: bold;
@@ -39,7 +58,7 @@
         background-color: $lang_bg;
         font-size: 14px;
         border-radius: 8px;
-        padding: 8px 8px;
+        padding: 8px;
         width: 100%;
         z-index: 5;
         .select_item {
@@ -55,6 +74,17 @@
         }
       }
     }
+    .menu,
+    .close_menu {
+      margin-left: auto;
+      display: none;
+    }
+    @include mq("tablet-wide", max) {
+      .menu {
+        display: block;
+      }
+    }
+
     .login-with-fb {
       margin-left: auto;
       border: 1px solid #ffffff40;
@@ -67,6 +97,9 @@
       line-height: 1.23;
       img {
         margin-right: 16px;
+      }
+      @include mq("tablet-wide", max) {
+        display: none;
       }
     }
   }
@@ -170,7 +203,7 @@
       color: $pinkish_grey;
     }
     @include mq("phone-wide", max) {
-      padding: 14px 18px;
+      padding: 14px 12px;
     }
   }
   .search-btn {
@@ -181,6 +214,9 @@
     font-weight: 600;
     background-color: $dark_seconr_color;
     color: #fff;
+    @include mq("phone-wide", max) {
+      padding: 14px 12px;
+    }
   }
 }
 .search-result-list {

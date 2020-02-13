@@ -42,30 +42,33 @@ $(document).ready(function () {
     //#endregion 
 
     //#region NAV MANU
-
-    $('.sub-categories .list').first().fadeIn();
-    $('.categories-list li').click(function () {
-        $(`.sub-categories .list`).fadeOut(200);
-        $(this).siblings().removeClass('active');
-        $(this).addClass('active');
-        setTimeout(() => {
-            $(`.sub-categories ${$(this).data("id")}`).fadeIn();
-        }, 200);
-    });
-
+    if (window.outerWidth > 1024) {
+        $('.sub-categories .list').first().fadeIn();
+        $('.categories-list li').click(function () {
+            $(`.sub-categories .list`).fadeOut(200);
+            $(this).siblings().removeClass('active');
+            $(this).addClass('active');
+            setTimeout(() => {
+                $(`.sub-categories ${$(this).data("id")}`).fadeIn();
+            }, 200);
+        });
+    }
     //#endregion
 
     //#region HEAHER ON SCROLL
-    $(window).scroll(function () {
-        var currentScroll = $(this).scrollTop();
-        if (currentScroll > 600) {
-            $('header').addClass('scroll-header');
-            $('#home-page').addClass('page-onscroll')
-        } else {
-            $('header').removeClass('scroll-header')
-            $('#home-page').removeClass('page-onscroll')
-        }
-    });
+    if (window.outerWidth > 1024) {
+        $(window).scroll(function () {
+            var currentScroll = $(this).scrollTop();
+            if (currentScroll > 600) {
+                $('header').addClass('scroll-header');
+                $('#home-page').addClass('page-onscroll')
+            } else {
+                $('header').removeClass('scroll-header')
+                $('#home-page').removeClass('page-onscroll')
+            }
+        });
+    }
+
     //#endregion
 
     //#region MODAL
@@ -248,6 +251,29 @@ $(document).ready(function () {
 
     }
 
+    //#endregion
+
+    //#region MOBILE MENU
+    $('.menu').click(function () {
+        $(this).fadeOut(200);
+        setTimeout(() => {
+            $('.close_menu').fadeIn()
+        }, 200);
+        $('.mobile-menu').slideDown()
+    });
+    $('.close_menu').click(function () {
+        $(this).fadeOut(200);
+        setTimeout(() => {
+            $('.menu').fadeIn()
+        }, 200);
+        $('.mobile-menu').slideUp()
+    });
+    $('.mobile-menu .menu-item').click(function () {
+        $(this).parent().siblings().find('.menu-item').removeClass('active');
+        $(this).parent().siblings().find('.sub-menu').slideUp();
+        $(this).toggleClass('active');
+        $(this).next().slideToggle();
+    })
     //#endregion
 
 });
