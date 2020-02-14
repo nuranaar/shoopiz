@@ -4,6 +4,10 @@
     margin: 48px 0;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    .property {
+      margin: 0 8px;
+    }
     .property-title {
       padding: 18px 0;
       font-size: 16px;
@@ -87,6 +91,10 @@
 #product-list-filter {
   margin: 64px 0;
   .view {
+    display: flex;
+    @include mq("phone-wide", max) {
+      display: none;
+    }
     .product-view {
       margin-left: 16px;
       cursor: pointer;
@@ -113,9 +121,15 @@
     text-align: left;
     color: $dark_teal_three;
     margin-left: 32px;
+    @include mq("phone-wide", max) {
+      margin-left: 0;
+    }
     .arrange-select {
       min-width: 200px;
       margin-left: 16px;
+          @include mq("phone-wide", max) {
+            min-width: 150px;
+          }
       .select_top {
         padding: 16px;
         border-radius: 8px;
@@ -294,6 +308,9 @@
   .product {
     min-height: 610px;
     position: relative;
+    .img{
+      margin: 0 auto;
+    }
     .learn-more {
       position: absolute;
       bottom: 0;

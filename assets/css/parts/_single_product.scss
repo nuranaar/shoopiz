@@ -6,6 +6,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap;
     &:hover {
       box-shadow: none;
     }
@@ -82,10 +83,13 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-
+  flex-wrap: wrap;
+  @include mq("tablet-wide", max) {
+  justify-content: space-evenly;
+  }
   .page-item {
     cursor: pointer;
-    margin-left: 18px;
+    margin: 8px 10px;
     padding: 13px;
     min-width: 124px;
     text-align: center;
@@ -120,6 +124,10 @@
       column-count: 2;
       width: 75%;
       column-gap: 30px;
+      @include mq('phone-wide', max){
+        width: 100%;
+        column-gap: 0px;
+      }
       li {
         padding: 8px 0;
         display: flex;
@@ -158,11 +166,14 @@
     }
     .single-product-prise-list {
       margin: 10px 0;
+      padding: 20px 0;
       transition: all 0.3s;
       display: flex;
       align-items: center;
       border: solid 1px $menu_card_border_opacity;
       border-radius: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
       &:hover {
         box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.09);
         border-color: #fff;
@@ -178,6 +189,9 @@
       }
       .info {
         margin-left: 48px;
+        @include mq('phone-wide', max){
+          margin-left: 0;
+        }
         .store-info {
           margin-bottom: 10px;
           p {
@@ -206,7 +220,8 @@
         padding: 10px 0 13px;
         width: 52px;
         text-align: center;
-        margin: 0 7px;
+        margin: 12px 7px;
+
       }
       .price {
         margin: 0 32px;
@@ -248,8 +263,9 @@
       border-bottom: 2px solid $menu_card_border_opacity;
       padding-bottom: 32px;
       .all-reviews {
-        width: 50%;
         position: relative;
+        @include mq('tablet-wide', max){
+        }
         &::after {
           content: "";
           position: absolute;
@@ -269,6 +285,9 @@
             margin-top: 2px;
             width: 260px;
             border-radius: 8px;
+            @include mq('phone-wide', max){
+              width: 120px;
+            }
             .progress-bar {
               border-radius: 8px;
               background-color: $dark_seconr_color;
@@ -288,6 +307,10 @@
       }
       .review-info {
         margin: auto;
+        @include mq('tablet-wide', max){
+          margin-top: 24px;
+          text-align: center;
+        }
         p {
           font-size: 18px;
           font-weight: bold;
@@ -413,8 +436,8 @@
       &:focus {
         border-color: $dark_seconr_color;
       }
-      &::placeholder{
-font-weight: normal;
+      &::placeholder {
+        font-weight: normal;
       }
     }
   }

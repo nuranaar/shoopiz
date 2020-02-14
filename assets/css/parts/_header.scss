@@ -173,8 +173,28 @@
   box-shadow: 0 30px 50px 0 rgba(0, 0, 0, 0.05);
   .header {
     padding: 32px 0 24px;
+    display: flex;
+    @include mq("phone-wide", max) {
+      flex-wrap: wrap;
+    }
+  }
+  .menu,
+  .close_menu {
+    margin-left: auto;
+    display: none;
+  }
+  @include mq("phone-wide", max) {
+    .menu {
+      display: block;
+    }
   }
   .header-search {
+    @include mq("phone-wide", max) {
+      width: 100%;
+    } 
+    @include mq("tablet-wide", max) {
+      margin: 12px 0;
+    }
     .search-form input {
       border: solid 1px $menu_card_border_opacity;
     }
@@ -184,7 +204,7 @@
   }
 }
 .search-form {
-  min-width: 500px;
+  min-width: 450px;
   max-width: 550px;
   display: flex;
   position: relative;
@@ -238,6 +258,7 @@
   padding: 16px 0;
   max-height: 500px;
   overflow-y: auto;
+
   &::-webkit-scrollbar-thumb {
     width: 3px;
     background-color: $green_blue;
@@ -254,6 +275,7 @@
     margin: 0 27px;
     display: flex;
     align-items: center;
+
     .img {
       width: 58px;
       height: 58px;
@@ -261,6 +283,13 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+      }
+    }
+    @include mq("tablet-wide", max) {
+      margin: 0 16px;
+      .img {
+        width: 50px;
+        height: 50px;
       }
     }
     .search-product {
@@ -279,6 +308,9 @@
           width: 270px;
           white-space: nowrap;
           text-overflow: ellipsis;
+          @include mq("tablet-wide", max) {
+            width: 120px;
+          }
         }
         &:hover {
           font-weight: bold;
