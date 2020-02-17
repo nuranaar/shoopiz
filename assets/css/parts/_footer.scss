@@ -12,14 +12,11 @@ footer {
     @include mq("tablet", max) {
       display: block;
       padding: 32px 0;
-      .logo{
+      .logo {
         display: none;
       }
     }
     .download-btn {
-      @include mq("tablet", max) {
-        margin: 0 auto ;
-      }
       display: flex;
       align-items: center;
       width: fit-content;
@@ -33,6 +30,13 @@ footer {
       line-height: 1.23;
       img {
         margin-right: 12px;
+      }
+      @include mq("tablet", max) {
+        // padding: 7px 12px;
+        margin: 0 auto;
+        img {
+          width: 12px;
+        }
       }
     }
   }
@@ -70,6 +74,18 @@ footer {
           font-weight: bold;
           color: $dark_seconr_color;
         }
+      }
+    }
+  }
+  @include mq("phone-wide", max) {
+    p {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    ul {
+      li {
+        font-size: 12px;
+        line-height: 1.54;
       }
     }
   }

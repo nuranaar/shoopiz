@@ -1,17 +1,30 @@
 #single-product {
   border-bottom: solid 1px $menu_card_border_opacity;
   padding-bottom: 32px;
+  @include mq("phone-wide", max) {
+    padding-bottom: 12px;
+  }
   .product {
     border: none;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include mq("phone-wide", max) {
+      margin: 0;
+    }
     &:hover {
       box-shadow: none;
     }
     .img {
       max-width: 450px;
+      @include mq("phone-wide", max) {
+        max-width: 120px;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
     .product-info {
       margin: auto 0;
@@ -28,6 +41,9 @@
           border-radius: 6px;
           background-color: $blue_green;
           padding: 8px 16px;
+          @include mq("phone-wide", max) {
+            padding: 0 8px 4px;
+          }
           .store,
           .price {
             color: #fff;
@@ -45,6 +61,13 @@
         .left {
           margin-left: 32px;
         }
+        @include mq("phone-wide", max) {
+          .store,
+          .price {
+            font-size: 10px;
+          }
+          padding: 0 0 4px;
+        }
       }
     }
     .notify-btn {
@@ -58,6 +81,14 @@
       img {
         margin-right: 8px;
       }
+      @include mq("phone-wide", max) {
+        padding: 6px 10px;
+        margin-top: 12px;
+        font-size: 10px;
+        img {
+          width: 12px;
+        }
+      }
     }
   }
 }
@@ -68,6 +99,10 @@
     line-height: 1.25;
     color: $dark_seconr_color;
     margin-bottom: 8px;
+    @include mq("phone-wide", max) {
+      font-size: 10px;
+      margin-top: 12px;
+    }
   }
   .model {
     font-size: 18px;
@@ -76,6 +111,10 @@
     color: $dark_teal_three;
     margin-bottom: 8px;
     max-width: 300px;
+    @include mq("phone-wide", max) {
+      max-width: 170px;
+      font-size: 10px;
+    }
   }
 }
 
@@ -85,7 +124,7 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   @include mq("tablet-wide", max) {
-  justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   .page-item {
     cursor: pointer;
@@ -99,6 +138,12 @@
     font-size: 13px;
     font-weight: bold;
     color: $dark_teal_three;
+    @include mq("phone-wide", max) {
+      font-size: 10px;
+      padding: 8px;
+      min-width: 60px;
+      margin: 8px 4px;
+    }
     &:hover {
       background-color: $menu_card_border_opacity;
     }
@@ -113,21 +158,24 @@
   .page-content {
     display: none;
     padding: 48px 0;
+    @include mq("phone-wide", max) {
+      padding: 20px 0;
+    }
     .info {
       font-size: 15px;
       line-height: 1.57;
       color: #000000;
       margin: 30px 0;
+      @include mq("phone-wide", max) {
+        margin: 10px 0;
+        font-size: 10px;
+      }
     }
     .product-property-list {
       margin: 40px 0;
       column-count: 2;
       width: 75%;
       column-gap: 30px;
-      @include mq('phone-wide', max){
-        width: 100%;
-        column-gap: 0px;
-      }
       li {
         padding: 8px 0;
         display: flex;
@@ -147,6 +195,17 @@
           color: $dark_teal_three;
         }
       }
+      @include mq("phone-wide", max) {
+        width: 100%;
+        column-gap: 0px;
+        margin: 20px 0;
+        li {
+          .key,
+          .value {
+            font-size: 10px;
+          }
+        }
+      }
     }
     .grafic {
       padding: 36px 32px;
@@ -162,6 +221,15 @@
         font-size: 24px;
         line-height: 1.21;
         color: #ee9421;
+      }
+      @include mq("phone-wide", max) {
+        padding: 20px 16px;
+        .grafic-title {
+          font-size: 12px;
+        }
+        .total-price {
+          font-size: 14px;
+        }
       }
     }
     .single-product-prise-list {
@@ -189,9 +257,6 @@
       }
       .info {
         margin-left: 48px;
-        @include mq('phone-wide', max){
-          margin-left: 0;
-        }
         .store-info {
           margin-bottom: 10px;
           p {
@@ -221,11 +286,10 @@
         width: 52px;
         text-align: center;
         margin: 12px 7px;
-
       }
       .price {
         margin: 0 32px;
-        width: 170px;
+        min-width: 170px;
         text-align: center;
         border-radius: 6px;
         padding: 13px 0 14px;
@@ -258,14 +322,51 @@
           }
         }
       }
+      @include mq("phone-wide", max) {
+        justify-content: start;
+        border-color: #fff;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.09);
+        .store-img {
+          width: 85px;
+        }
+        .title .model {
+          min-width: 300px;
+        }
+        .info {
+          margin-left: 16px;
+          .store-info {
+            display: none;
+          }
+        }
+        .phone,
+        .address {
+          width: 32px;
+          padding: 4px 0;
+          img {
+            width: 12px;
+          }
+        }
+        .price {
+          font-size: 12px;
+          min-width: 100px;
+          padding: 8px 0 10px;
+          margin: 0 12px;
+        }
+        .more {
+          font-size: 8px;
+          color: $dark_seconr_color;
+          text-decoration: underline;
+          .left {
+            display: none;
+          }
+        }
+      }
     }
     #review-page-head {
       border-bottom: 2px solid $menu_card_border_opacity;
       padding-bottom: 32px;
       .all-reviews {
         position: relative;
-        @include mq('tablet-wide', max){
-        }
         &::after {
           content: "";
           position: absolute;
@@ -285,8 +386,9 @@
             margin-top: 2px;
             width: 260px;
             border-radius: 8px;
-            @include mq('phone-wide', max){
+            @include mq("phone-wide", max) {
               width: 120px;
+              height: 10px;
             }
             .progress-bar {
               border-radius: 8px;
@@ -307,7 +409,7 @@
       }
       .review-info {
         margin: auto;
-        @include mq('tablet-wide', max){
+        @include mq("tablet-wide", max) {
           margin-top: 24px;
           text-align: center;
         }
@@ -329,6 +431,23 @@
           color: $dark_seconr_color;
         }
       }
+      @include mq("phone-wide", max) {
+        padding-bottom: 24px;
+        .all-reviews {
+          &::after {
+            display: none;
+          }
+        }
+        .review-info {
+          p {
+            font-size: 14px;
+          }
+          .add-comment {
+            margin-top: 12px;
+            font-size: 12px;
+          }
+        }
+      }
     }
     #comments {
       .comment {
@@ -348,6 +467,10 @@
           line-height: 1.38;
           color: $dark_teal_three;
           margin: 25px 0;
+          @include mq("phone-wide", max) {
+            font-size: 12px;
+            margin: 12px 0;
+          }
         }
         .comment-info {
           display: flex;
@@ -362,6 +485,15 @@
             font-size: 14px;
             line-height: 1.29;
             color: #a7b2ba;
+          }
+          @include mq("phone-wide", max) {
+            .fullname {
+              font-size: 12px;
+              margin-right: 12px;
+            }
+            .date {
+              font-size: 11px;
+            }
           }
         }
       }
@@ -389,6 +521,9 @@
       padding: 30px;
       outline: transparent;
       margin: 12px 0;
+      @include mq('phone-wide', max){
+        padding: 18px;
+      }
       &::placeholder {
         font-weight: normal;
         color: $menu_card_border;
@@ -433,6 +568,9 @@
       box-shadow: none;
       outline: none;
       resize: none;
+      @include mq('phone-wide', max){
+        padding: 18px;
+      }
       &:focus {
         border-color: $dark_seconr_color;
       }

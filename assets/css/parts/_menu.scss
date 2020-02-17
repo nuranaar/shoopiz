@@ -173,11 +173,12 @@
 .mobile-menu {
   padding-bottom: 12px;
   position: absolute;
-  top: -22%;
+  // top: -22%;
   background-color: #fff;
   width: 100%;
   left: 0;
   display: none;
+  z-index: 10;
   .menu-item {
     margin: 12px;
     display: flex;

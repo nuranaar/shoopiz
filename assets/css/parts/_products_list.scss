@@ -1,5 +1,28 @@
 #search-properties {
   border-bottom: solid 1px $menu_card_border_opacity;
+  .filter {
+    @include mq("phone-wide", max) {
+      display: none;
+    }
+  }
+  .add-filter {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: $dark_seconr_color;
+    color: #fff;
+    font-size: 14px;
+    width: fit-content;
+    margin-top: 32px;
+    @include mq("phone-wide", min) {
+      display: none;
+    }
+    img {
+      margin-right: 8px;
+    }
+  }
   .properties-list {
     margin: 48px 0;
     display: flex;
@@ -85,11 +108,71 @@
   }
   .head_filter {
     padding: 32px 0;
+    @include mq("phone-wide", max) {
+      padding: 16px 0;
+    }
+  }
+  .filter-mobile {
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding-bottom: 24px;
+    display: none;
+    &.active {
+      display: block;
+    }
+    .apply-filter {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      background-color: $dark_seconr_color;
+      color: #fff;
+      font-size: 14px;
+    }
+    .properties-list {
+      margin: 0;
+      display: block;
+      .property-values {
+        .checkbox {
+          width: 16px;
+          height: 16px;
+          border-radius: 3px;
+          border: solid 1px #e1e6ea;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all 0.3s;
+        }
+        p {
+          margin-left: 8px;
+        }
+        .label {
+          display: flex;
+          align-items: baseline;
+        }
+        input:checked + .label {
+          .checkbox {
+            background-color: $darken_blue_green;
+            border-color: $darken_blue_green;
+          }
+          p {
+            color: $blue_green;
+            font-weight: bold;
+          }
+        }
+      }
+    }
   }
 }
 
 #product-list-filter {
   margin: 64px 0;
+  @include mq("phone-wide", max) {
+    margin: 32px 0;
+  }
   .view {
     display: flex;
     @include mq("phone-wide", max) {
@@ -122,14 +205,12 @@
     color: $dark_teal_three;
     margin-left: 32px;
     @include mq("phone-wide", max) {
+      font-size: 12px;
       margin-left: 0;
     }
     .arrange-select {
       min-width: 200px;
       margin-left: 16px;
-          @include mq("phone-wide", max) {
-            min-width: 150px;
-          }
       .select_top {
         padding: 16px;
         border-radius: 8px;
@@ -161,6 +242,19 @@
           }
         }
       }
+      @include mq("phone-wide", max) {
+        min-width: 150px;
+        .select_top {
+          padding: 8px;
+          .select_text {
+            font-size: 10px;
+          }
+        }
+        .select_bottom .select_list .select_item {
+          font-size: 10px;
+          padding: 4px 8px;
+        }
+      }
     }
   }
   .count {
@@ -169,11 +263,16 @@
     line-height: 1.19;
     text-align: left;
     color: $blue_green;
+    @include mq("phone-wide", max) {
+      font-size: 14px;
+    }
   }
 }
-
 #product-list {
   padding: 32px 0 64px;
+  @include mq("phone-wide", max) {
+    padding: 20px 0 24px;
+  }
 }
 .product {
   margin-bottom: 25px;
@@ -187,7 +286,8 @@
   .img {
     width: 100%;
     max-width: 270px;
-    // max-height: 200px;
+    @include mq("phone-wide", max) {
+    }
     img {
       width: 100%;
       height: 100%;
@@ -197,7 +297,6 @@
 
   .product-title {
     padding: 15px 30px 0;
-
     .brand {
       font-size: 12px;
       font-weight: bold;
@@ -213,6 +312,9 @@
       text-align: left;
       color: $dark_teal_three;
       margin-bottom: 8px;
+    }
+    @include mq("phone-wide", max) {
+      font-size: 10px;
     }
   }
   .price-list {
@@ -308,7 +410,7 @@
   .product {
     min-height: 610px;
     position: relative;
-    .img{
+    .img {
       margin: 0 auto;
     }
     .learn-more {

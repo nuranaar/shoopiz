@@ -38,7 +38,9 @@ $(document).ready(function () {
         $('.search-overlay').addClass('active');
         $('.search-result-list ').addClass('active');
     }
-
+    $('.search').click(function () {
+        $('.header-search').slideToggle()
+    })
     //#endregion 
 
     //#region NAV MANU
@@ -120,21 +122,32 @@ $(document).ready(function () {
         $(`.property[data-prop_id='${$('.fixed_modal').data('prop_id')}'`).fadeOut();
     })
 
-
+    $('.add-filter').click(function () {
+        $(".filter-mobile").slideDown('slow');
+    })
 
     $('.property .property-value input[type="checkbox"]').change(function () {
         const value = $(this).val();
         if ($(this).is(":checked")) {
-            $(this).parents('.property-value').siblings().find('input[type="checkbox"]').prop('checked', false);
             head_filter_select_items.push(value);
-            AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list')
-            $(this).parents('.property').fadeOut()
+            if ($(this).parents(".filter").length) {
+                $(this).parents('.property-value').siblings().find('input[type="checkbox"]').prop('checked', false);
+                AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list')
+                $(this).parents('.property').fadeOut();
+            }
         }
         else {
             head_filter_select_items = DeleteFromArray(value, head_filter_select_items, '.head_filter .selected_filter_list');
             $(this).prop('checked', false)
         }
-    })
+        console.log('khsbc', head_filter_select_items)
+    });
+
+    $('.apply-filter').click(function () {
+        $(".filter-mobile").slideUp('slow');
+        AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list');
+    });
+
 
     //#endregion
 
@@ -222,7 +235,6 @@ $(document).ready(function () {
     }
 
     function starCount() {
-        debugger;
         let count = $('.select-stars li.selected').length;
         let label;
         switch (count) {

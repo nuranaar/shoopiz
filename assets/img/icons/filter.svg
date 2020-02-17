@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="10.423" height="9.988" viewBox="0 0 10.423 9.988">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fff}
+        </style>
+    </defs>
+    <g id="prefix__adjust" transform="translate(0 -10.667)">
+        <g id="prefix__Group_728" data-name="Group 728" transform="translate(0 17.615)">
+            <g id="prefix__Group_727" data-name="Group 727">
+                <path id="prefix__Path_230" d="M9.988 353.086H8.832a1.51 1.51 0 00-2.9 0H.434a.434.434 0 000 .869h5.5a1.51 1.51 0 002.9 0h1.154a.434.434 0 000-.869zm-2.606 1.086a.651.651 0 11.651-.651.652.652 0 01-.65.65z" class="prefix__cls-1" data-name="Path 230" transform="translate(0 -352)"/>
+            </g>
+        </g>
+        <g id="prefix__Group_730" data-name="Group 730" transform="translate(0 10.667)">
+            <g id="prefix__Group_729" data-name="Group 729">
+                <path id="prefix__Path_231" d="M9.988 11.753H8.832a1.51 1.51 0 00-2.9 0H.434a.434.434 0 000 .869h5.5a1.51 1.51 0 002.9 0h1.154a.434.434 0 000-.869zm-2.605 1.085a.651.651 0 11.651-.651.652.652 0 01-.651.651z" class="prefix__cls-1" data-name="Path 231" transform="translate(0 -10.667)"/>
+            </g>
+        </g>
+        <g id="prefix__Group_732" data-name="Group 732" transform="translate(0 14.141)">
+            <g id="prefix__Group_731" data-name="Group 731">
+                <path id="prefix__Path_232" d="M9.988 182.42h-5.5a1.51 1.51 0 00-2.9 0H.434a.434.434 0 000 .869h1.157a1.51 1.51 0 002.9 0h5.5a.434.434 0 000-.869zm-6.948 1.085a.651.651 0 11.651-.651.652.652 0 01-.651.651z" class="prefix__cls-1" data-name="Path 232" transform="translate(0 -181.334)"/>
+            </g>
+        </g>
+    </g>
+</svg>

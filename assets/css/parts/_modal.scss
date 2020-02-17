@@ -29,6 +29,9 @@
     box-shadow: 0 0 99px 0 rgba(0, 0, 0, 0.11);
     background-color: #fff;
     padding: 64px 48px 42px;
+    @include mq("phone-wide", max) {
+      padding: 24px;
+    }
     .modal_title {
       font-size: 16px;
       font-weight: bold;
@@ -47,6 +50,9 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include mq("phone-wide", max) {
+        display: block;
+      }
     }
     .buttons {
       margin-top: 12px;
