@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shoopiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -1174,6 +1175,9 @@
                         <div class="grafic">
                             <p class="grafic-title">Price range for this product</p>
                             <p class="total-price">$86,589</p>
+                            <div id="chart">
+                                <canvas id="chartCanvas" height="100"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1524,6 +1528,8 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

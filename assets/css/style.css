@@ -2264,6 +2264,10 @@ footer .list {
   }
 }
 
+#pages .page-content .grafic #chartCanvas {
+  margin-top: 20px;
+}
+
 #pages .page-content .single-product-prise-list {
   margin: 10px 0;
   padding: 20px 0;
@@ -2307,6 +2311,9 @@ footer .list {
 }
 
 #pages .page-content .single-product-prise-list .info .store-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 10px;
 }
 

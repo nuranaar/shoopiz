@@ -231,6 +231,9 @@
           font-size: 14px;
         }
       }
+      #chartCanvas {
+        margin-top: 20px;
+      }
     }
     .single-product-prise-list {
       margin: 10px 0;
@@ -258,6 +261,7 @@
       .info {
         margin-left: 48px;
         .store-info {
+          display: flex;
           margin-bottom: 10px;
           p {
             font-size: 16px;
@@ -521,7 +525,7 @@
       padding: 30px;
       outline: transparent;
       margin: 12px 0;
-      @include mq('phone-wide', max){
+      @include mq("phone-wide", max) {
         padding: 18px;
       }
       &::placeholder {
@@ -568,7 +572,7 @@
       box-shadow: none;
       outline: none;
       resize: none;
-      @include mq('phone-wide', max){
+      @include mq("phone-wide", max) {
         padding: 18px;
       }
       &:focus {

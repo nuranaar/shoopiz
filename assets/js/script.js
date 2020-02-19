@@ -165,7 +165,8 @@ $(document).ready(function () {
 
     //#region SINGLE PRODUNCT PAGE CONTENT
 
-    $(`.page-content`).first().fadeIn();
+    // $(`.page-content`).first().fadeIn();
+    $(`.page-content#price_history`).fadeIn();
     $('.page-list .page-item').click(function () {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
@@ -286,6 +287,42 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $(this).next().slideToggle();
     })
+    //#endregion
+
+    //#region CHART
+
+    let ctx = $('#chart #chartCanvas');
+    let chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: [1, 2, 3, 4],
+            datasets: [{
+                data: [30, 20, 40],
+                backgroundColor: [
+                    'transparent'
+                ],
+                borderColor: [
+                    '#ee9221'
+                ],
+                borderWidth: 5,
+                pointRadius: 0
+            }],
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+            legend: {
+                display: false,
+            },
+            
+        },
+    });
+
     //#endregion
 
 });
