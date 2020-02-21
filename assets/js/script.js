@@ -165,8 +165,8 @@ $(document).ready(function () {
 
     //#region SINGLE PRODUNCT PAGE CONTENT
 
-    // $(`.page-content`).first().fadeIn();
-    $(`.page-content#price_history`).fadeIn();
+    $(`.page-content`).first().fadeIn();
+    // $(`.page-content#price_history`).fadeIn();
     $('.page-list .page-item').click(function () {
         $(this).siblings().removeClass('active');
         $(this).addClass('active');
@@ -319,7 +319,7 @@ $(document).ready(function () {
             legend: {
                 display: false,
             },
-            
+
         },
     });
 
