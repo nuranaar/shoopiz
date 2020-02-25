@@ -160,8 +160,15 @@
       .info {
         display: none;
       }
-      .search-form input {
-        border: solid 1px $menu_card_border_opacity;
+      .search-form {
+        min-width: 400px;
+        .search-input {
+          border: solid 1px $menu_card_border_opacity;
+          padding: 12px 24px;
+        }
+        .search-btn {
+          padding: 12px 24px ;
+        }
       }
     }
   }

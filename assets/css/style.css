@@ -373,8 +373,17 @@ body {
   display: none;
 }
 
-.main-header.scroll-header .header-search .search-form input {
+.main-header.scroll-header .header-search .search-form {
+  min-width: 400px;
+}
+
+.main-header.scroll-header .header-search .search-form .search-input {
   border: solid 1px #c3cdd680;
+  padding: 12px 24px;
+}
+
+.main-header.scroll-header .header-search .search-form .search-btn {
+  padding: 12px 24px;
 }
 
 .second-header {
