@@ -67,13 +67,21 @@
     width: 100%;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.11);
     background-color: #fff;
-    padding: 0 48px;
+    // padding: 0 48px;
     z-index: 2;
     .lists {
+      padding: 32px;
       .list {
         margin: 0;
+        p {
+          font-size: 16px;
+        }
         ul {
           column-count: 3;
+          li {
+            font-size: 16px;
+            line-height: 1.7;
+          }
         }
       }
     }
@@ -121,7 +129,7 @@
       li {
         display: flex;
         align-items: center;
-        margin: 24px 0;
+        margin: 18px 0 18px 18px;
         position: relative;
         cursor: pointer;
         .icon {
@@ -131,12 +139,12 @@
         }
         p {
           transition: all 0.3s;
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 500;
           line-height: 1.78;
           text-align: left;
           color: $dark-teal-three;
-          margin-left: 24px;
+          margin-left: 16px;
         }
         &:hover {
           .icon {
@@ -192,7 +200,7 @@
       color: $dark_teal_two;
       font-size: 13px;
       font-weight: bold;
-      line-height: 1.23;
+      line-height: 1.73;
       margin: 0 18px;
       width: fit-content;
     }
@@ -215,6 +223,52 @@
     padding: 0 56px;
     .list {
       li {
+        font-size: 14px;
+        line-height: 2;
+      }
+    }
+  }
+}
+
+.second-header {
+  #nav-menu {
+    margin: 4px;
+    .menu-cards {
+      .menu-card {
+        margin: 12px 6px;
+        padding: 10px;
+        .icon {
+          svg {
+            height: 28px;
+            width: 28px;
+          }
+        }
+        .title {
+          margin-left: 6px;
+        }
+      }
+      .sub-menu .list {
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+    .menu-button {
+      padding: 10px 0;
+      margin-left: 2px;
+      .all-categories {
+        width: max-content;
+        font-size: 14px;
+        padding: 12px 16px;
+        margin-left: 8px;
+        img {
+          margin-left: 4px;
+        }
+      }
+    }
+    .sub-menu .sub-categories .list {
+      margin-left: 24px;
+      li{
         font-size: 14px;
       }
     }

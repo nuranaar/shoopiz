@@ -58,18 +58,20 @@ $(document).ready(function () {
     //#endregion
 
     //#region HEAHER ON SCROLL
-    if (window.outerWidth > 1024) {
-        $(window).scroll(function () {
-            var currentScroll = $(this).scrollTop();
-            if (currentScroll > 600) {
-                $('header').addClass('scroll-header');
-                $('#home-page').addClass('page-onscroll')
-            } else {
-                $('header').removeClass('scroll-header')
-                $('#home-page').removeClass('page-onscroll')
-            }
-        });
+    let scrollHeight;
+    if (!$('header').hasClass('scroll-header')) {
+        scrollHeight = $('header').innerHeight();
     }
+    $(window).scroll(function () {
+        const currentScroll = $(this).scrollTop();
+        if (currentScroll > scrollHeight) {
+            $('header').addClass('scroll-header');
+            $('.page').addClass('page-onscroll')
+        } else {
+            $('header').removeClass('scroll-header')
+            $('.page').removeClass('page-onscroll')
+        }
+    });
 
     //#endregion
 
