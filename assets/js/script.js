@@ -19,7 +19,8 @@ $(document).ready(function () {
 
     //#region HEADER SEARCH 
     $('.search-form .search-input').keyup(function () {
-        if ($(this).val().length > 0 && $(this).val().trim() != '') {
+        const value = $(this).val();
+        if (value.length > 0 && value.trim() != '') {
             OpenSearchList()
         }
         else {

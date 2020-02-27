@@ -151,6 +151,12 @@
     padding: 18px 0;
     .scroll-logo {
       display: block;
+      img {
+        width: 150px;
+        @include mq("phone-wide", max) {
+          width: 120px;
+        }
+      }
     }
   }
   .logo,
@@ -166,12 +172,26 @@
     }
     .search-form {
       min-width: 400px;
+      @include mq("phone-wide", max) {
+        min-width: 100px;
+      }
       .search-input {
         border: solid 1px $menu_card_border_opacity;
         padding: 12px 24px;
+        @include mq("phone-wide", max) {
+          padding: 6px 12px;
+          font-size: 9px;
+          &::placeholder {
+            font-size: 9px;
+          }
+        }
       }
       .search-btn {
         padding: 12px 24px;
+        @include mq("phone-wide", max) {
+          padding: 6px 12px;
+          font-size: 10px;
+        }
       }
     }
   }
@@ -273,6 +293,10 @@
     }
     @include mq("phone-wide", max) {
       padding: 14px 12px;
+      font-size: 12px;
+      &::placeholder {
+        font-size: 12px;
+      }
     }
   }
   .search-btn {
@@ -284,6 +308,7 @@
     background-color: $dark_seconr_color;
     color: #fff;
     @include mq("phone-wide", max) {
+      font-size: 12px;
       padding: 14px 12px;
     }
   }
@@ -303,7 +328,10 @@
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.16);
   background-color: #fff;
   z-index: 5;
-  padding: 16px 0;
+  padding: 16px 24px;
+  @include mq("phone-wide", max) {
+    padding: 12px;
+  }
   overflow-y: auto;
   min-width: 100%;
   &::-webkit-scrollbar-thumb {
@@ -319,7 +347,6 @@
       border: none;
     }
     padding: 12px 0;
-    margin: 0 27px;
     display: flex;
     align-items: center;
 
@@ -358,6 +385,9 @@
           @include mq("tablet-wide", max) {
             width: 120px;
           }
+          @include mq("phone-wide", max) {
+            font-size: 11px;
+          }
         }
         &:hover {
           font-weight: bold;
@@ -373,6 +403,9 @@
         font-weight: 500;
         line-height: 1.29;
         color: $menu_card_border;
+        @include mq("phone-wide", max) {
+          font-size: 10px;
+        }
       }
     }
     .product-info {
@@ -389,6 +422,9 @@
         font-weight: 600;
         line-height: 1.25;
         color: $green_blue;
+        @include mq("phone-wide", max) {
+          font-size: 8px;
+        }
       }
     }
   }
@@ -428,5 +464,53 @@
     &.active {
       display: block;
     }
+  }
+}
+.search-categories-list {
+  a {
+    color: unset;
+  }
+  display: flex;
+  align-items: start;
+  padding-bottom: 18px;
+  border-bottom: 1px solid $menu_card_border;
+  img {
+    width: 28px;
+    height: 28px;
+    margin: 12px 24px 12px 12px;
+    @include mq("phone-wide", max) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  ul li {
+    font-size: 16px;
+    line-height: 1.33;
+    margin-top: 12px;
+    color: $dark_teal;
+    @include mq("phone-wide", max) {
+      font-size: 10px;
+    }
+    .category-span {
+      font-weight: 600;
+    }
+    .search-span {
+      font-weight: 600;
+      color: $dark_seconr_color;
+    }
+  }
+}
+.search-value {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 3.83;
+  padding: 0px 14px;
+  text-align: left;
+  color: $dark_teal_three;
+  border-radius: 4px;
+  width: max-content;
+  background-color: $menu_card_border_opacity;
+  @include mq("phone-wide", max) {
+    font-size: 10px;
   }
 }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="search" width="24px" height="24     px" viewBox="0 0 12 12">
+    <defs>
+        <style>
+            .cls-1{fill:#ee9321}
+        </style>
+    </defs>
+    <path id="Path_222" d="M8.006 1.372a4.691 4.691 0 1 0-.641 7.166.988.988 0 0 0 .268.5L10.3 11.7a.991.991 0 0 0 1.4-1.4L9.034 7.632a.991.991 0 0 0-.5-.267 4.7 4.7 0 0 0-.528-5.993zm-.841 5.793a3.5 3.5 0 1 1 0-4.952 3.506 3.506 0 0 1 0 4.952z" class="cls-1" data-name="Path 222" transform="translate(-.001)"/>
+</svg>

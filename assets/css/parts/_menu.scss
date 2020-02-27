@@ -98,6 +98,9 @@
       border: none;
       margin-left: 30px;
       border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       img {
         margin-left: 12px;
       }
@@ -268,7 +271,7 @@
     }
     .sub-menu .sub-categories .list {
       margin-left: 24px;
-      li{
+      li {
         font-size: 14px;
       }
     }
