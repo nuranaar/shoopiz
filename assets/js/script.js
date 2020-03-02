@@ -27,8 +27,14 @@ $(document).ready(function () {
             CloseSearchList()
         }
     })
+
     $('.search-form .search-input').blur(function () {
         CloseSearchList()
+    })
+
+    $('.search-show').click(function () {
+        $(this).css('display', 'none')
+        $('.search-form').addClass('show')
     })
 
     function CloseSearchList() {
@@ -267,6 +273,16 @@ $(document).ready(function () {
 
     }
 
+    // FUNCTOIN FOR SEARCH LOADER
+    // **data => true or false
+    function SearchLoading(data) {
+        if (data) {
+            $('.search-loading').addClass('show')
+        } else {
+            $('.search-loading').removeClass('show')
+        }
+    }
+
     //#endregion
 
     //#region MOBILE MENU
@@ -327,5 +343,7 @@ $(document).ready(function () {
     });
 
     //#endregion
+
+
 
 });

@@ -17,9 +17,11 @@
             <div class="header justify-content-between">
                 <div class="scroll-logo"><img src="./assets/img/footer_logo.svg" alt=""></div>
                 <div class="mobile-icons">
-
                     <div class="menu"><img src="./assets/img/icons/menu-other.svg" alt=""></div>
                     <div class="close_menu"><img src="./assets/img/icons/close_menu-other.svg" alt=""></div>
+                    <!-- <div class="search-show">
+                        <img src="./assets/img/icons/search-icon.svg" alt="">
+                    </div> -->
                 </div>
 
             </div>
@@ -740,41 +742,71 @@
             </section>
             <!--#endregion -->
             <div class="header-search">
+                <div class="search-show">
+                    <img src="./assets/img/icons/search.svg" alt="">
+                </div>
                 <form action="" class="search-form">
                     <input type="text" class="search-input" placeholder="What are you looking for?">
                     <button type="button" class="search-btn">SEARCH</button>
-                    <ul class="search-result-list">
-                        <li class="item">
-                            <div class="img"><img src="./assets/img/search-result.png" alt=""></div>
-                            <div class="search-product">
-                                <a href="#">
-                                    <h4 class="title">
-                                        iPhone 11 Pro 64 GB
-                                    </h4>
-                                </a>
-                                <p class="info">Apple</p>
+                    <div class="search-result-list ">
+                        <div class="search-value">Apple iPhone…</div>
+                        <div class="search-categories-list">
+
+                            <img src="./assets/img/icons/search.svg" alt="">
+                            <ul>
+                                <li> <span class="search-span">Apple iPho</span><span class="search-result">ne
+                                        accessories </span>
+                                    in <a href="#" class="category-span"> Phones & Accessories </a>
+                                </li>
+                                <li> <span class="search-span">Apple iPho</span><span class="search-result">ne
+                                        accessories </span>
+                                    in <a href="#" class="category-span"> Phones & Accessories </a>
+                                </li>
+                                <li> <span class="search-span">Apple iPho</span><span class="search-result">ne
+                                        accessories </span>
+                                    in <a href="#" class="category-span"> Phones & Accessories </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-products-list">
+                            <div class="search-loading">
+                                <img class="loader" src="./assets/img/icons/loader.svg" alt="">
+                                <p>Axtarılır…</p>
                             </div>
-                            <div class="product-info">
-                                <p class="store-count">in 3 store</p>
-                                <p class="price-range">1600 AZN - 1740 AZN</p>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="img"><img src="./assets/img/search-result.png" alt=""></div>
-                            <div class="search-product">
-                                <a href="#">
-                                    <h4 class="title">
-                                        iPhone 11 Pro 64 GB
-                                    </h4>
-                                </a>
-                                <p class="info">Apple</p>
-                            </div>
-                            <div class="product-info">
-                                <p class="store-count">in 3 store</p>
-                                <p class="price-range">1600 AZN - 1740 AZN</p>
-                            </div>
-                        </li>
-                    </ul>
+                            <ul>
+                                <li class="item">
+                                    <div class="img"><img src="./assets/img/search-result.png" alt=""></div>
+                                    <div class="search-product">
+                                        <a href="#">
+                                            <h4 class="title">
+                                                iPhone 11 Pro 64 GB
+                                            </h4>
+                                        </a>
+                                        <p class="info">Apple</p>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="store-count">in 3 store</p>
+                                        <p class="price-range">1600 AZN - 1740 AZN</p>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="img"><img src="./assets/img/search-result.png" alt=""></div>
+                                    <div class="search-product">
+                                        <a href="#">
+                                            <h4 class="title">
+                                                iPhone 11 Pro 64 GB
+                                            </h4>
+                                        </a>
+                                        <p class="info">Apple</p>
+                                    </div>
+                                    <div class="product-info">
+                                        <p class="store-count">in 3 store</p>
+                                        <p class="price-range">1600 AZN - 1740 AZN</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </form>
             </div>
             <!-- #region MOBILE MENU -->
@@ -937,7 +969,7 @@
         </div>
     </header>
     <!--#endregion -->
-   
+
     <div class="page">
         <div class="search-overlay"></div>
         <!--#region MAIN  -->

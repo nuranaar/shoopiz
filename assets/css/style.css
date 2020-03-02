@@ -384,16 +384,6 @@ body {
   display: none;
 }
 
-.scroll-header .header-search .search-form {
-  min-width: 400px;
-}
-
-@media only screen and (max-width: 480px) {
-  .scroll-header .header-search .search-form {
-    min-width: 100px;
-  }
-}
-
 .scroll-header .header-search .search-form .search-input {
   border: solid 1px rgba(195, 205, 214, 0.502);
   padding: 12px 24px;
@@ -457,12 +447,6 @@ body {
           align-items: center;
 }
 
-@media only screen and (max-width: 1024px) {
-  .second-header .container {
-    display: block;
-  }
-}
-
 .second-header .header {
   padding: 32px 0 24px;
   display: -webkit-box;
@@ -474,6 +458,7 @@ body {
   .second-header .header {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    width: 100%;
   }
 }
 
@@ -514,11 +499,13 @@ body {
   }
 }
 
-@media only screen and (max-width: 1024px) {
-  .second-header .header-search {
-    width: 100%;
-    display: none;
-  }
+.second-header .header-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -527,9 +514,23 @@ body {
   }
 }
 
+.second-header .header-search .search-show {
+  margin: 0 8px;
+}
+
 .second-header .header-search .search-form {
   margin: 0 8px;
-  min-width: 290px;
+  width: 0px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.second-header .header-search .search-form.show {
+  width: 280px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .second-header .header-search .search-form input {
@@ -567,12 +568,11 @@ body {
 }
 
 .search-form {
-  min-width: 450px;
-  max-width: 550px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  max-width: 550px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -655,7 +655,7 @@ body {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 25px);
   right: 0;
   border-radius: 8px;
   -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.16);
@@ -688,6 +688,7 @@ body {
 }
 
 .search-result-list .item {
+  margin-right: 4px;
   border-bottom: 1px solid #c3cdd6;
   padding: 12px 0;
   display: -webkit-box;
@@ -927,6 +928,95 @@ body {
   .search-value {
     font-size: 10px;
   }
+}
+
+.search-products-list {
+  min-height: 160px;
+  max-height: 120px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.search-products-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.search-products-list::-webkit-scrollbar-thumb {
+  width: 5px;
+  border-radius: 4px;
+  background-color: #003e46;
+}
+
+.search-products-list::-webkit-scrollbar-track {
+  width: 5px;
+}
+
+.search-products-list .search-loading {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.search-products-list .search-loading.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search-products-list .search-loading .loader {
+  -animation: spin 1s infinite linear;
+  -webkit-animation: spin2 1s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+.search-products-list .search-loading p {
+  color: #003e46;
+  font-size: 14px;
 }
 
 #nav-menu {
