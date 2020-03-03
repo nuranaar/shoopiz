@@ -120,3 +120,24 @@ input {
     }
   }
 }
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 36px;
+  width: 37px;
+  height: 37px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  z-index: 9999;
+  padding: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px 0px $menu_card_border;
+  transition: all 0.4s;
+  cursor: pointer;
+  &.show {
+    visibility: visible;
+    opacity: 1;
+  }
+}

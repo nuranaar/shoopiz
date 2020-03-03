@@ -315,6 +315,25 @@ $(document).ready(function () {
     })
     //#endregion
 
+    //#region SCROLL TOP
+    $(window).scroll(function () {
+        const currentScroll = $(this).scrollTop();
+        if (currentScroll > 500) {
+            $('.scroll-top').addClass('show')
+        }
+        else {
+            $('.scroll-top').removeClass('show')
+        }
+        // console.log($(this).scrollTop(500))
+    })
+    $('.scroll-top').click(function () {
+        $("html, body").animate({
+            scrollTop: '0'
+        });
+    })
+
+    //#endregion
+
     //#region CHART
 
     let ctx = $('#chart #chartCanvas');

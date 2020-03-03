@@ -160,6 +160,30 @@ input.invalid + .error-message {
   margin: 4px 0;
 }
 
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 36px;
+  width: 37px;
+  height: 37px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  z-index: 9999;
+  padding: 6px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 12px 0px #c3cdd6;
+          box-shadow: 0 0 12px 0px #c3cdd6;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.scroll-top.show {
+  visibility: visible;
+  opacity: 1;
+}
+
 .main-header {
   height: 520px;
   background-image: url(../img/header-bg-img.svg);
@@ -1055,7 +1079,6 @@ input.invalid + .error-message {
   position: relative;
   opacity: 0;
   visibility: hidden;
-  width: 0;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
