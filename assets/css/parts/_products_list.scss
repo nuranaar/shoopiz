@@ -1,5 +1,6 @@
 #search-properties {
   border-bottom: solid 1px $menu_card_border_opacity;
+  padding-top: 32px;
   .filter {
     @include mq("phone-wide", max) {
       display: none;
@@ -15,7 +16,6 @@
     color: #fff;
     font-size: 14px;
     width: fit-content;
-    margin-top: 32px;
     @include mq("phone-wide", min) {
       display: none;
     }
@@ -24,7 +24,7 @@
     }
   }
   .properties-list {
-    padding: 48px 0;
+    padding: 32px 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -197,66 +197,7 @@
     text-align: left;
     color: $dark_teal_three;
   }
-  .arrange {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.19;
-    text-align: left;
-    color: $dark_teal_three;
-    margin-left: 32px;
-    @include mq("phone-wide", max) {
-      font-size: 12px;
-      margin-left: 0;
-    }
-    .arrange-select {
-      min-width: 200px;
-      margin-left: 16px;
-      .select_top {
-        padding: 16px;
-        border-radius: 8px;
-        border: 2px solid $pale_grey;
-        .select_text {
-          font-size: 13px;
-          font-weight: bold;
-          line-height: 1.55;
-          text-align: left;
-          color: $dark_teal_three;
-        }
-      }
-      .select_bottom {
-        border: 2px solid $pale_grey;
-        border-top: none;
-        border-radius: 8px;
-        .select_list {
-          padding: 8px;
-          .select_item {
-            font-size: 13px;
-            font-weight: bold;
-            line-height: 1.55;
-            text-align: left;
-            color: $dark_teal_three;
-            padding: 8px 16px;
-            &:hover {
-              background-color: $pale_grey;
-            }
-          }
-        }
-      }
-      @include mq("phone-wide", max) {
-        min-width: 150px;
-        .select_top {
-          padding: 8px;
-          .select_text {
-            font-size: 10px;
-          }
-        }
-        .select_bottom .select_list .select_item {
-          font-size: 10px;
-          padding: 4px 8px;
-        }
-      }
-    }
-  }
+
   .count {
     font-size: 16px;
     font-weight: bold;
@@ -286,8 +227,7 @@
   .img {
     width: 100%;
     max-width: 270px;
-    @include mq("phone-wide", max) {
-    }
+
     img {
       width: 100%;
       height: 100%;
@@ -297,6 +237,9 @@
 
   .product-title {
     padding: 15px 30px 0;
+    @include mq("phone-wide", max) {
+      padding: 8px 15px 0;
+    }
     .brand {
       font-size: 12px;
       font-weight: bold;
@@ -319,7 +262,9 @@
   }
   .price-list {
     padding: 0 30px;
-
+    @include mq("phone-wide", max) {
+      padding: 0 15px;
+    }
     margin: 4px 0;
     li {
       padding: 8px 0;
@@ -344,6 +289,9 @@
   }
   .price-range {
     margin: 16px 30px 20px;
+    @include mq("phone-wide", max) {
+      margin: 8px 15px 10px;
+    }
     .range {
       font-size: 16px;
       font-weight: bold;
@@ -371,6 +319,11 @@
     padding: 12px 17px 14px;
     text-decoration: none;
     transition: all 0.3s;
+    @include mq("phone-wide", max) {
+      font-size: 11px;
+      padding: 12px;
+      margin: 0 15px 16px;
+    }
     img {
       margin-left: 12px;
       margin-bottom: 4px;
@@ -409,6 +362,9 @@
 .table_view {
   .product {
     min-height: 610px;
+    @include mq("phone-wide", max) {
+      min-height: 530px;
+    }
     position: relative;
     .img {
       margin: 0 auto;
@@ -471,5 +427,67 @@
   }
   .modal_bottom {
     margin-top: 40px;
+  }
+}
+.arrange {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.19;
+  text-align: left;
+  color: $dark_teal_three;
+  margin-left: 32px;
+  @include mq("phone-wide", max) {
+    font-size: 12px;
+    margin-left: 0;
+  }
+  .arrange-select {
+    background-color: #fff;
+    min-width: 200px;
+    margin-left: 16px;
+    .select_top {
+      padding: 16px;
+      border-radius: 8px;
+      border: 2px solid $pale_grey;
+      .select_text {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.55;
+        text-align: left;
+        color: $dark_teal_three;
+      }
+    }
+    .select_bottom {
+      border: 2px solid $pale_grey;
+      border-top: none;
+      border-radius: 8px;
+      background-color: #fff;
+      .select_list {
+        padding: 8px;
+        .select_item {
+          font-size: 13px;
+          font-weight: bold;
+          line-height: 1.55;
+          text-align: left;
+          color: $dark_teal_three;
+          padding: 8px 16px;
+          &:hover {
+            background-color: $pale_grey;
+          }
+        }
+      }
+    }
+    @include mq("phone-wide", max) {
+      min-width: 150px;
+      .select_top {
+        padding: 8px;
+        .select_text {
+          font-size: 10px;
+        }
+      }
+      .select_bottom .select_list .select_item {
+        font-size: 10px;
+        padding: 4px 8px;
+      }
+    }
   }
 }
