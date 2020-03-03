@@ -17,6 +17,7 @@ body {
 .cls-1 {
   transition: all 0.3s;
 }
+
 .btn {
   &:focus,
   &:active {
@@ -105,6 +106,17 @@ body {
       &:hover {
         background-color: $dark_seconr_color;
       }
+    }
+  }
+}
+
+input {
+  &.invalid {
+    border-color: #f35a5a !important;
+    & + .error-message {
+      color: #f35a5a;
+      font-size: 12px;
+      margin: 4px 0;
     }
   }
 }
