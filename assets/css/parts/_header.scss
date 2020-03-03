@@ -207,6 +207,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     @include mq("tablet-wide", max) {
       // display: block;
     }
@@ -237,6 +238,11 @@
     .close_menu,
     .menu {
       margin-left: 16px;
+      @include mq("phone-wide", max) {
+        img {
+          width: 15px;
+        }
+      }
     }
   }
   @include mq("tablet-wide", max) {
@@ -251,10 +257,15 @@
       // display: none;
     }
     @include mq("tablet-wide", max) {
-      margin: 12px 0;
+      margin: 16px 0 12px;
     }
-    .search-show{
-      margin: 0 8px;
+    .search-show {
+      margin: 0 4px;
+      @include mq("phone-wide", max) {
+        img {
+          width: 15px;
+        }
+      }
     }
     .search-form {
       margin: 0 8px;
@@ -264,13 +275,17 @@
 
       visibility: hidden;
       &.show {
-        width: 280px;
+        width: 400px;
         opacity: 1;
         visibility: visible;
+        @include mq("phone-wide", max) {
+          width: 140px;
+        }
       }
       input {
         border: solid 1px $menu_card_border_opacity;
         padding: 12px;
+        border-radius: 8px;
         &::placeholder {
           font-size: 14px;
           font-weight: 500;
@@ -291,7 +306,7 @@
   position: relative;
   max-width: 550px;
   @include mq("phone-wide", max) {
-    min-width: 100px;
+    // min-width: 100px;
   }
   input {
     width: 100%;
