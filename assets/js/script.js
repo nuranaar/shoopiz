@@ -370,6 +370,23 @@ $(document).ready(function () {
 
     //#endregion
 
-
+    //#region 
+    $('#notify-me-form').submit(function (e) {
+        e.preventDefault();
+        Swal.fire(
+            'Təşəkkürlər!',
+            'Hər hansı mağaza axtardığınız qiyməti təklif etdikdə sizə məlumat veriləcəkdir',
+            'success'
+        )
+    });
+    $('#add-comment-form').submit(function (e) {
+        e.preventDefault();
+        Swal.fire(
+            '',
+            'Rəyiniz üçün təşəkkürlər!',
+            'success'
+        )
+    });
+    //#endregion
 
 });

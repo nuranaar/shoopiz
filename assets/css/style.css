@@ -2,6 +2,7 @@
 @media only screen and (min-width: 1279px) {
   .container {
     max-width: 1200px;
+    min-width: 1170px;
   }
 }
 
@@ -182,6 +183,30 @@ input.invalid + .error-message {
 .scroll-top.show {
   visibility: visible;
   opacity: 1;
+}
+
+.banner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.banner-container .banner {
+  background-color: #80808093;
+  width: 100%;
+}
+
+.banner-container .container {
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-container .banner {
+    display: none;
+  }
+  .banner-container .container {
+    margin: 0 auto;
+  }
 }
 
 .main-header {
@@ -1079,8 +1104,9 @@ input.invalid + .error-message {
   position: relative;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 0;
 }
 
 #nav-menu.show {
@@ -1440,6 +1466,10 @@ footer {
   background-color: #f8f8f8;
   border-top: 1px solid #c3cdd6;
   padding-bottom: 30px;
+}
+
+footer .row {
+  margin: 0;
 }
 
 footer .footer-head {
@@ -2320,7 +2350,7 @@ footer .list {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 111;
+  z-index: 1111;
   width: 100vw;
   height: 100vh;
   -webkit-box-align: center;

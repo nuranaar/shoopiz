@@ -2,6 +2,9 @@ footer {
   background-color: $footer_bg_color;
   border-top: 1px solid $menu_card_border;
   padding-bottom: 30px;
+  .row{
+    margin:0;
+  }
   .footer-head {
     margin-bottom: 20px;
     border-bottom: 1px solid $menu_card_border_opacity;

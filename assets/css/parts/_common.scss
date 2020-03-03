@@ -1,6 +1,7 @@
 .container {
   @include mq("desktop", min) {
     max-width: 1200px;
+    min-width: 1170px;
   }
 }
 ul {
@@ -139,5 +140,24 @@ input {
   &.show {
     visibility: visible;
     opacity: 1;
+  }
+}
+.banner-container {
+  display: flex;
+  .banner {
+    background-color: #80808093;
+    width: 100%;
+  }
+  .container {
+    margin: 0;
+
+  }
+  @include mq("tablet", max) {
+    .banner {
+      display: none;
+    }
+    .container {
+      margin: 0 auto;
+    }
   }
 }
