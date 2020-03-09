@@ -25,11 +25,9 @@
 #looking {
   margin-bottom: 32px;
   width: 100%;
-  @include mq("tablet-wide", max) {
-    margin-bottom: 6px;
-  }
-  img {
-    width: 100%;
+  height: 150px;
+  @include mq('tablet-wide', max){
+    display: none;
   }
 }
 #products {
@@ -45,8 +43,9 @@
       }
     }
   }
-  .more-btn {
+  .main-page-more-product{
     margin: 44px auto;
+  .more-btn {
     width: fit-content;
     border-radius: 8px;
     padding: 18px 42px;
@@ -57,4 +56,5 @@
     font-weight: bold;
     line-height: 1.23;
   }
+}
 }

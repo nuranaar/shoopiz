@@ -1,5 +1,6 @@
 .main-header {
   height: 520px;
+  background-color: #003E45;
   background-image: url(../img/header-bg-img.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -79,6 +80,7 @@
     .close_menu {
       margin-left: auto;
       display: none;
+      z-index: 12;
     }
     @include mq("tablet-wide", max) {
       .menu {
@@ -229,6 +231,7 @@
     }
   }
   .mobile-icons {
+  z-index: 12;
     align-self: center;
     display: none;
     @include mq("tablet-wide", max) {
@@ -545,7 +548,7 @@
 }
 .search-products-list {
   min-height: 160px;
-  max-height: 120px;
+  max-height: 250px;
   position: relative;
   overflow-y: auto;
   &::-webkit-scrollbar {

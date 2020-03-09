@@ -21,7 +21,10 @@ $(document).ready(function () {
     $('.search-form .search-input').keyup(function () {
         const value = $(this).val();
         if (value.length > 0 && value.trim() != '') {
-            OpenSearchList()
+            OpenSearchList();
+            $('html, body').animate({
+                scrollTop: $(this).offset().top
+            }, 1000);
         }
         else {
             CloseSearchList()
