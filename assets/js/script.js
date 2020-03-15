@@ -259,19 +259,19 @@ $(document).ready(function () {
         let label;
         switch (count) {
             case 1:
-                label = 'Very bad';
+                label = 'Çox pis';
                 break;
             case 2:
-                label = 'Bad';
+                label = 'Pis';
                 break;
             case 3:
                 label = 'Normal';
                 break;
             case 4:
-                label = 'Good';
+                label = 'Yaxşı';
                 break;
             case 5:
-                label = 'Very good';
+                label = 'Çox yaxşı';
                 break;
             default:
                 label = '';
