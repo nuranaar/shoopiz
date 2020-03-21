@@ -107,6 +107,10 @@ $(document).ready(function () {
 
     let head_filter_select_items = [];
     let multiple_select_items = [];
+
+    function checkDisplayOrNot(){
+        console.log(multiple_select_items.length);
+    }
     $('#property-list input').change(function () {
         const value = $(this).val();
         if ($(this).is(":checked")) {
@@ -128,7 +132,6 @@ $(document).ready(function () {
                 : true
         }
         )
-
     })
 
     $('.btn-apply').click(function () {
@@ -136,6 +139,7 @@ $(document).ready(function () {
         AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list');
         $('.fixed_modal .modal_close').click();
         $(`.property[data-prop_id='${$('.fixed_modal').data('prop_id')}'`).fadeOut();
+        
     })
 
     $('.add-filter').click(function () {
@@ -297,19 +301,39 @@ $(document).ready(function () {
 
     //#region MOBILE MENU
     $('.menu').click(function () {
-        $(this).fadeOut(200);
+        openMobileMenu(this);
+    });
+
+    function openMobileMenu(elem) {
+        $(elem).fadeOut(200);
         setTimeout(() => {
             $('.close_menu').fadeIn()
         }, 200);
-        $('.mobile-menu').slideDown()
+        $('.mobile-menu').slideDown();
+    }
+
+    $("body").click(function (e) {
+        if (!e.target.classList.contains("menu")) {
+            if (!$(e.target).parents(".mobile-menu").length) {
+                closeMobileMenu();
+            }
+        }
+
     });
-    $('.close_menu').click(function () {
-        $(this).fadeOut(200);
+
+    function closeMobileMenu() {
+        $(".close_menu").fadeOut(200);
         setTimeout(() => {
             $('.menu').fadeIn()
         }, 200);
         $('.mobile-menu').slideUp()
+    }
+
+    $('.close_menu').click(function () {
+        closeMobileMenu();
     });
+
+
     $('.mobile-menu .menu-item').click(function () {
         $(this).parent().siblings().find('.menu-item').removeClass('active');
         $(this).parent().siblings().find('.sub-menu').slideUp();
@@ -340,36 +364,39 @@ $(document).ready(function () {
     //#region CHART
 
     let ctx = $('#chart #chartCanvas');
-    let chart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: [1, 2, 3, 4],
-            datasets: [{
-                data: [30, 20, 40],
-                backgroundColor: [
-                    'transparent'
-                ],
-                borderColor: [
-                    '#ee9221'
-                ],
-                borderWidth: 5,
-                pointRadius: 0
-            }],
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
+    if (ctx.length) {
+        let chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [1, 2, 3, 4],
+                datasets: [{
+                    data: [30, 20, 40],
+                    backgroundColor: [
+                        'transparent'
+                    ],
+                    borderColor: [
+                        '#ee9221'
+                    ],
+                    borderWidth: 5,
+                    pointRadius: 0
+                }],
             },
-            legend: {
-                display: false,
-            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                },
+                legend: {
+                    display: false,
+                },
 
-        },
-    });
+            },
+        });
+    }
+
 
     //#endregion
 
@@ -392,4 +419,12 @@ $(document).ready(function () {
     });
     //#endregion
 
+
+    $('.lazy').Lazy();
+
+    if ($("#search-properties .more").length) {
+        $("#search-properties .more").click(function () {
+            $(this).prev().find(".with-more").slideToggle();
+        });
+    }
 });

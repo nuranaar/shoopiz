@@ -20,13 +20,12 @@
     position: relative;
     .menu-card {
       cursor: pointer;
-      width: min-content;
       margin: 17px 0;
       margin-right: 5px;
       transition: all 0.3s;
       border: 1px solid $menu_card_border_opacity;
       border-radius: 8px;
-      padding: 28px 42px;
+      padding: 28px 35px;
       display: flex;
       align-items: center;
       .icon {

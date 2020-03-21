@@ -1001,6 +1001,19 @@
                                             <div class="label"> 6.1 inch <span class="count">(44)</span></div>
                                         </label>
                                     </li>
+
+                                    <li class="property-value with-more">
+                                        <label>
+                                            <input value="5.5 inch" type="checkbox">
+                                            <div class="label"> 6.4 inch <span class="count">(2)</span></div>
+                                        </label>
+                                    </li>
+                                    <li class="property-value with-more">
+                                        <label>
+                                            <input value="6.1 inch" type="checkbox">
+                                            <div class="label"> 6.8 inch <span class="count">(44)</span></div>
+                                        </label>
+                                    </li>
                                 </ul>
 
                                 <div class="more">Daha çox...</div>
@@ -1160,7 +1173,7 @@
                     </div>
                     <div class="add-filter">
                         <img src="./assets/img/icons/filter.svg" alt="">
-                        Add filters
+                        Filter əlavə et
                     </div>
                     <div class="head_filter">
                         <ul class="selected_filter_list">
@@ -1328,8 +1341,8 @@
                             </li>
 
                         </ul>
-                        <button class="apply-filter" type="button">Apply filter</button>
-                        <button class="btn close-filter" type="button">Close</button>
+                        <button class="apply-filter" type="button">Təsdiqlə</button>
+                        <button class="btn close-filter" type="button">Bağla</button>
 
                     </div>
                 </div>
@@ -1343,7 +1356,7 @@
                     <sectoin id="product-list-filter" class="d-flex justify-content-between align-items-center">
                         <div class="d-flex">
                             <div class="view  align-items-center">
-                                <p>Görünüs:</p>
+                                <p>Görünüş:</p>
                                 <div data-id="table_view" class="product-view active">
                                     <svg xmlns="http://www.w3.org/2000/svg" id="menu-2" width="25.533" height="25.533"
                                         viewBox="0 0 25.533 25.533">
@@ -1458,7 +1471,7 @@
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="product">
                                     <div class="img">
-                                        <img src="./assets/img/iphone.png" alt="">
+                                        <img  class="lazy" data-src="./assets/img/iphone.png" alt="">
                                     </div>
 
                                     <div class="product-title">
@@ -1496,7 +1509,7 @@
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="product">
                                     <div class="img">
-                                        <img src="./assets/img/iphone.png" alt="">
+                                        <img  class="lazy" data-src="./assets/img/iphone.png" alt="">
                                     </div>
 
                                     <div class="product-title">
@@ -1560,7 +1573,7 @@
                             <div class="col-lg-3 col-md-6 col-6">
                                 <div class="product">
                                     <div class="img">
-                                        <img src="./assets/img/iphone.png" alt="">
+                                        <img  class="lazy" data-src="./assets/img/iphone.png" alt="">
                                     </div>
                                     <div class="product-title">
                                         <p class="brand">Apple</p>
@@ -1701,7 +1714,7 @@
                         </ul>
                         <div class="buttons">
                             <button class="modal_close btn-close-modal" type="button">Bağla</button>
-                            <button class="btn-apply " type="button">Tətbiq edin</button>
+                            <button class="btn-apply " type="button">Təsdiqlə</button>
                         </div>
                     </div>
                 </div>
@@ -1713,6 +1726,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.lazy.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 

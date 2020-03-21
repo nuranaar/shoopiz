@@ -289,8 +289,9 @@
         border: solid 1px $menu_card_border_opacity;
         padding: 12px;
         border-radius: 8px;
+        font-size: 16px;
         &::placeholder {
-          font-size: 14px;
+          font-size: 16px;
           font-weight: 500;
         }
       }
@@ -317,6 +318,7 @@
     padding: 28px 36px;
     border-radius: 8px 0 0 8px;
     outline: transparent;
+    font-size: 16px;
     &::placeholder {
       font-size: 16px;
       font-weight: 600;
@@ -324,9 +326,9 @@
     }
     @include mq("phone-wide", max) {
       padding: 14px 12px;
-      font-size: 12px;
+      font-size: 16px;
       &::placeholder {
-        font-size: 12px;
+        font-size: 16px;
       }
     }
   }

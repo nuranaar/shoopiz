@@ -1,6 +1,6 @@
 #search-properties {
   border-bottom: solid 1px $menu_card_border_opacity;
-  padding-top: 32px;
+  padding-top: 10px;
   .filter {
     @include mq("phone-wide", max) {
       display: none;
@@ -23,8 +23,10 @@
       margin-right: 8px;
     }
   }
+  .filter{
+    margin-bottom: 10px;
+  }
   .properties-list {
-    padding: 32px 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -41,6 +43,7 @@
     }
     .more,
     .multiple-select {
+      cursor: pointer;
       padding: 5px 0;
       font-size: 13px;
       font-weight: bold;
@@ -67,22 +70,31 @@
       input:checked + .label {
         font-weight: bold;
       }
-      .property-value .label {
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 2.31;
-        text-align: left;
-        color: $dark_teal_three;
-        cursor: pointer;
-        transition: all 0.3s;
-        .count {
-          color: $blue_green;
+      .property-value{
+        &.with-more{
+          display: none;
         }
-        &:hover {
-          color: $blue_green;
-          text-decoration-line: underline;
+        label{
+          margin-bottom: 0;
+        }
+        .label {
+          font-size: 13px;
+          font-weight: 500;
+          line-height: 2.31;
+          text-align: left;
+          color: $dark_teal_three;
+          cursor: pointer;
+          transition: all 0.3s;
+          .count {
+            color: $blue_green;
+          }
+          &:hover {
+            color: $blue_green;
+            text-decoration-line: underline;
+          }
         }
       }
+      
     }
     .more-filters {
       border-radius: 8px;
@@ -267,7 +279,7 @@
     }
     margin: 4px 0;
     li {
-      padding: 8px 0;
+      padding: 2px 0;
       .store {
         font-size: 11px;
         font-weight: 500;
@@ -361,7 +373,7 @@
 }
 .table_view {
   .product {
-    min-height: 610px;
+    min-height: 550px;
     @include mq("phone-wide", max) {
       min-height: 530px;
     }
