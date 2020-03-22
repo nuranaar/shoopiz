@@ -97,6 +97,7 @@
   }
 }
 .title {
+  position: relative;
   .brand {
     font-size: 22px;
     font-weight: bold;
@@ -118,6 +119,22 @@
     @include mq("phone-wide", max) {
       max-width: 170px;
       font-size: 10px;
+    }
+  }
+
+  .review{
+    border-radius: 4px;
+    background-color: #ee9421;
+    padding: 6px 10px 8px;
+    margin-left: 12px;
+    position: absolute;
+    right: -45px;
+    top: 45px;
+    span{
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.23;
+      color: #fff;
     }
   }
 }
@@ -337,9 +354,12 @@
         .store-img {
           width: 85px;
         }
-        .title .model {
-          min-width: 300px;
-        }
+        .title{
+          .model {
+            min-width: 300px;
+          }
+        
+        } 
         .info {
           margin-left: 16px;
           .store-info {

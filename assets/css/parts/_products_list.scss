@@ -331,14 +331,19 @@
     padding: 12px 17px 14px;
     text-decoration: none;
     transition: all 0.3s;
-    @include mq("phone-wide", max) {
-      font-size: 11px;
-      padding: 12px;
-      margin: 0 15px 16px;
-    }
     img {
       margin-left: 12px;
       margin-bottom: 4px;
+    }
+
+    @include mq("phone-wide", max) {
+      font-size: 10px;
+      padding: 10px 9px;
+      margin: 0 15px 16px;
+      img {
+        margin-left: 0px;
+        margin-bottom: 2px;
+      }
     }
   }
 }
@@ -375,7 +380,7 @@
   .product {
     min-height: 550px;
     @include mq("phone-wide", max) {
-      min-height: 530px;
+      min-height: 570px;
     }
     position: relative;
     .img {

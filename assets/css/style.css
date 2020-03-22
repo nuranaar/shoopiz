@@ -25,6 +25,10 @@ body {
   transition: all 0.3s;
 }
 
+button {
+  -webkit-appearance: none !important;
+}
+
 .btn:focus, .btn:active {
   outline: transparent;
   -webkit-box-shadow: none;
@@ -2140,17 +2144,21 @@ footer .list {
   transition: all 0.3s;
 }
 
-@media only screen and (max-width: 480px) {
-  .product .learn-more {
-    font-size: 11px;
-    padding: 12px;
-    margin: 0 15px 16px;
-  }
-}
-
 .product .learn-more img {
   margin-left: 12px;
   margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 480px) {
+  .product .learn-more {
+    font-size: 10px;
+    padding: 10px 9px;
+    margin: 0 15px 16px;
+  }
+  .product .learn-more img {
+    margin-left: 0px;
+    margin-bottom: 2px;
+  }
 }
 
 .list_view .product {
@@ -2199,7 +2207,7 @@ footer .list {
 
 @media only screen and (max-width: 480px) {
   .table_view .product {
-    min-height: 530px;
+    min-height: 570px;
   }
 }
 
@@ -2623,6 +2631,10 @@ footer .list {
   }
 }
 
+.title {
+  position: relative;
+}
+
 .title .brand {
   font-size: 22px;
   font-weight: bold;
@@ -2652,6 +2664,23 @@ footer .list {
     max-width: 170px;
     font-size: 10px;
   }
+}
+
+.title .review {
+  border-radius: 4px;
+  background-color: #ee9421;
+  padding: 6px 10px 8px;
+  margin-left: 12px;
+  position: absolute;
+  right: -45px;
+  top: 45px;
+}
+
+.title .review span {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.23;
+  color: #fff;
 }
 
 .page-list {
