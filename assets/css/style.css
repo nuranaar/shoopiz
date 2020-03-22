@@ -210,7 +210,7 @@ input.invalid + .error-message {
 }
 
 .main-header {
-  height: 520px;
+  height: 450px;
   background-color: #003E45;
   background-image: url(../img/header-bg-img.svg);
   background-repeat: no-repeat;
@@ -222,20 +222,20 @@ input.invalid + .error-message {
 @media only screen and (max-width: 1024px) {
   .main-header {
     background-image: url(../img/mobile-bg.svg);
-    height: 460px;
+    height: 390px;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .main-header {
-    height: 360px;
+    height: 300px;
     background-image: none;
     background-color: #003e46;
   }
 }
 
 .main-header .header {
-  padding-top: 60px;
+  padding-top: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -358,7 +358,7 @@ input.invalid + .error-message {
 
 .main-header .header-search {
   position: relative;
-  padding: 80px 0;
+  padding: 50px 0;
 }
 
 .main-header .header-search .title {
@@ -2691,10 +2691,10 @@ footer .list {
 
 @media only screen and (max-width: 480px) {
   .page-list .page-item {
-    font-size: 10px;
-    padding: 8px;
+    font-size: 9px;
+    padding: 5px;
     min-width: 60px;
-    margin: 8px 4px;
+    margin: 8px 0px;
   }
 }
 
