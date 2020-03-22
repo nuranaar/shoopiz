@@ -18,7 +18,9 @@ body {
 .cls-1 {
   transition: all 0.3s;
 }
-
+button{
+  -webkit-appearance: none !important;
+}
 .btn {
   &:focus,
   &:active {
