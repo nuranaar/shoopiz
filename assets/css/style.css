@@ -1863,12 +1863,12 @@ footer .list {
 }
 
 #search-properties .head_filter {
-  padding: 32px 0;
+  padding: 16px 0;
 }
 
 @media only screen and (max-width: 480px) {
   #search-properties .head_filter {
-    padding: 16px 0;
+    padding: 8px 0;
   }
 }
 
@@ -1943,12 +1943,12 @@ footer .list {
 }
 
 #product-list-filter {
-  margin: 64px 0;
+  margin: 10px 0;
 }
 
 @media only screen and (max-width: 480px) {
   #product-list-filter {
-    margin: 32px 0;
+    margin: 10px 0;
   }
 }
 
@@ -2847,7 +2847,6 @@ footer .list {
 
 #pages .page-content .single-product-prise-list {
   margin: 10px 0;
-  padding: 20px 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: -webkit-box;

@@ -122,7 +122,7 @@
     }
   }
 
-  .review{
+  .review {
     border-radius: 4px;
     background-color: #ee9421;
     padding: 6px 10px 8px;
@@ -130,7 +130,7 @@
     position: absolute;
     right: -45px;
     top: 45px;
-    span{
+    span {
       font-size: 13px;
       font-weight: bold;
       line-height: 1.23;
@@ -258,7 +258,6 @@
     }
     .single-product-prise-list {
       margin: 10px 0;
-      padding: 20px 0;
       transition: all 0.3s;
       display: flex;
       align-items: center;
@@ -354,12 +353,11 @@
         .store-img {
           width: 85px;
         }
-        .title{
+        .title {
           .model {
             min-width: 300px;
           }
-        
-        } 
+        }
         .info {
           margin-left: 16px;
           .store-info {

@@ -23,7 +23,7 @@
       margin-right: 8px;
     }
   }
-  .filter{
+  .filter {
     margin-bottom: 10px;
   }
   .properties-list {
@@ -70,11 +70,11 @@
       input:checked + .label {
         font-weight: bold;
       }
-      .property-value{
-        &.with-more{
+      .property-value {
+        &.with-more {
           display: none;
         }
-        label{
+        label {
           margin-bottom: 0;
         }
         .label {
@@ -94,7 +94,6 @@
           }
         }
       }
-      
     }
     .more-filters {
       border-radius: 8px;
@@ -119,9 +118,9 @@
     }
   }
   .head_filter {
-    padding: 32px 0;
+    padding: 16px 0;
     @include mq("phone-wide", max) {
-      padding: 16px 0;
+      padding: 8px 0;
     }
   }
   .filter-mobile {
@@ -181,9 +180,9 @@
 }
 
 #product-list-filter {
-  margin: 64px 0;
+  margin: 10px 0;
   @include mq("phone-wide", max) {
-    margin: 32px 0;
+    margin: 10px 0;
   }
   .view {
     display: flex;
