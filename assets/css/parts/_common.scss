@@ -18,7 +18,7 @@ body {
 .cls-1 {
   transition: all 0.3s;
 }
-button{
+button {
   -webkit-appearance: none !important;
 }
 .btn {
@@ -149,17 +149,29 @@ input {
   .banner {
     background-color: rgba(214, 214, 214, 0.57);
     width: 100%;
+    color: white;
+    font-size: 45px;
+    line-height: 150px;
+    text-align: center;
+    font-weight: 700;
   }
   .container {
     margin: 0;
-
   }
   @include mq("tablet", max) {
     .banner {
-      display: none;
+      width: auto;
+      font-size: 20px;
+      line-height: 100px;
     }
     .container {
       margin: 0 auto;
     }
   }
+}
+
+span.help-block.form-error {
+  display: block;
+  margin: 0 !important;
+  color: rgb(185, 74, 72) !important;
 }

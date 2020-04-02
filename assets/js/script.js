@@ -18,6 +18,10 @@ $(document).ready(function () {
     //#endregion
 
     //#region HEADER SEARCH 
+    $('.search-form .search-input').focus(function () {
+        closeMobileMenu();
+    });
+
     $('.search-form .search-input').keyup(function () {
         const value = $(this).val();
         if (value.length > 0 && value.trim() != '') {
@@ -38,7 +42,6 @@ $(document).ready(function () {
     $('.search-show').click(function () {
         $('.search-form').toggleClass('show')
         $('#nav-menu').toggleClass('show')
-
     })
 
     function CloseSearchList() {
@@ -108,7 +111,7 @@ $(document).ready(function () {
     let head_filter_select_items = [];
     let multiple_select_items = [];
 
-    function checkDisplayOrNot(){
+    function checkDisplayOrNot() {
         console.log(multiple_select_items.length);
     }
     $('#property-list input').change(function () {
@@ -134,13 +137,15 @@ $(document).ready(function () {
         )
     })
 
-    $('.btn-apply').click(function () {
-        head_filter_select_items = [...multiple_select_items];
-        AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list');
-        $('.fixed_modal .modal_close').click();
-        $(`.property[data-prop_id='${$('.fixed_modal').data('prop_id')}'`).fadeOut();
-        
-    })
+    if ($('.filter').length) {
+        $('.btn-apply').click(function () {
+            head_filter_select_items = [...multiple_select_items];
+            AddItemToFilterList(head_filter_select_items, '.head_filter .selected_filter_list');
+            $('.fixed_modal .modal_close').click();
+            $(`.property[data-prop_id='${$('.fixed_modal').data('prop_id')}'`).fadeOut();
+        });
+    }
+
 
     $('.add-filter').click(function () {
         $(".filter-mobile").slideDown('slow');
@@ -183,7 +188,60 @@ $(document).ready(function () {
         $('#product-list .product').parent().removeClass();
         $('.list_view .product').parent().addClass('col-lg-12');
         $('.table_view .product').parent().addClass('col-lg-3 col-md-6 col-sm-12');
-    })
+    });
+    if ($("#product-list").length) {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+                let row = $("<div></div>");
+                row.addClass("row");
+
+                for (var i = 0; i < 4; i++) {
+                    row.append(`<div class="col-lg-3 col-md-6 col-6">
+                                <div class="product">
+                                    <div class="img">
+                                        <img src="./assets/img/iphone.png" alt="">
+                                    </div>
+
+                                    <div class="product-title">
+                                        <p class="brand">Apple</p>
+                                        <p class="model">iPhone 11 Pro 64 GB - Dual SIM
+                                            Midnight Green</p>
+                                    </div>
+                                    <ul class="price-list">
+                                        <li>
+                                            <a href='#' class="store">maxi.az</a>
+                                            <p class="price">1.350 AZN</p>
+                                        </li>
+                                        <li>
+                                            <a href='#' class="store">maxi.az</a>
+                                            <p class="price">1.350 AZN</p>
+                                        </li>
+                                        <li>
+                                            <a href='#' class="store">maxi.az</a>
+                                            <p class="price">1.350 AZN</p>
+                                        </li>
+                                    </ul>
+                                    <div class="product-info">
+                                        <div class="price-range">
+                                            <p class="store-count">6 mağazada var</p>
+                                            <p class="range">
+                                                599.00-1349.00 AZN</p>
+                                        </div>
+                                        <a href="/single-product.html" class="learn-more">
+                                            ƏTRAFLI BAX
+                                            <img src="./assets/img/icons/left.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>`)
+                }
+
+                $("#product-list").append(row);
+            }
+        });
+    }
+
+
     //#endregion
 
     //#region SINGLE PRODUNCT PAGE CONTENT
@@ -312,15 +370,6 @@ $(document).ready(function () {
         $('.mobile-menu').slideDown();
     }
 
-    $("body").click(function (e) {
-        if (!e.target.classList.contains("menu")) {
-            if (!$(e.target).parents(".mobile-menu").length) {
-                closeMobileMenu();
-            }
-        }
-
-    });
-
     function closeMobileMenu() {
         $(".close_menu").fadeOut(200);
         setTimeout(() => {
@@ -401,26 +450,47 @@ $(document).ready(function () {
     //#endregion
 
     //#region 
-    $('#notify-me-form').submit(function (e) {
-        e.preventDefault();
-        Swal.fire(
-            'Təşəkkürlər!',
-            'Hər hansı mağaza axtardığınız qiyməti təklif etdikdə sizə məlumat veriləcəkdir',
-            'success'
-        )
-    });
-    $('#add-comment-form').submit(function (e) {
-        e.preventDefault();
-        Swal.fire(
-            '',
-            'Rəyiniz üçün təşəkkürlər!',
-            'success'
-        )
-    });
+
+    if ($('#notify-me-form').length) {
+        $.validate({
+            form: '#notify-me-form',
+            modules: 'security',
+            onError: function ($form) {
+                console.log($form);
+                // alert('Validation of form ' + $form.attr('id') + ' failed!');
+            },
+            onSuccess: function ($form) {
+                $('.fixed_modal .modal_close').click();
+                Swal.fire(
+                    'Təşəkkürlər!',
+                    'Hər hansı mağaza axtardığınız qiyməti təklif etdikdə sizə məlumat veriləcəkdir',
+                    'success'
+                )
+                return false;
+            }
+        });
+    }
+
+    if ($('#add-comment-form').length) {
+        $.validate({
+            form: '#add-comment-form',
+            modules: 'security',
+            onError: function ($form) {
+                console.log($form);
+                // alert('Validation of form ' + $form.attr('id') + ' failed!');
+            },
+            onSuccess: function ($form) {
+                $('.fixed_modal .modal_close').click();
+                Swal.fire(
+                    '',
+                    'Rəyiniz üçün təşəkkürlər!',
+                    'success'
+                )
+                return false;
+            }
+        });
+    }
     //#endregion
-
-
-    $('.lazy').Lazy();
 
     if ($("#search-properties .more").length) {
         $("#search-properties .more").click(function () {

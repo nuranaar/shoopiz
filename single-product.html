@@ -1582,13 +1582,17 @@
         <div class="modal_body col-lg-7 mx-auto">
             <form id='add-comment-form'>
                 <div class="form-group">
-                    <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Ad Soyad">
+                    <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Ad Soyad"
+                        data-validation="required" data-validation-error-msg="Ad Soyad yazın">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="email" id="email" class="form-control" placeholder="example@shoopiz.com">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="example@shoopiz.com"
+                        data-validation="email" data-validation-error-msg="Düzgün e-poçtu daxil edin"
+                        data-validation="required" data-validation-error-msg="E-poçtu daxil edin">
                 </div>
                 <div class="form-group">
-                    <textarea name="comment-message" id="message" rows="5" placeholder="Rəyiniz…"></textarea>
+                    <textarea name="comment-message" id="message" rows="5" placeholder="Rəyiniz…"
+                        ata-validation="required" data-validation-error-msg="Rəy yazın"></textarea>
                 </div>
                 <div class="modal_bottom">
                     <div class="select-stars">
@@ -1695,6 +1699,7 @@
             </form>
         </div>
     </div>
+
     <div class="fixed_modal" id="notify-me">
         <div class="overlay modal_close"></div>
         <div class="modal_body col-lg-7 mx-auto">
@@ -1703,13 +1708,22 @@
                 məbləği qeyd edin. Əgər hər hansı mağazada bu qiymət olarsa, biz sizə məlumat verək.</p>
 
             <form id='notify-me-form'>
-                <input type="text" placeholder="example@shoopiz.com">
-
-                <div class="price-input">
-                    <label for="">Məbləğ</label>
-                    <input type="text" placeholder="">
-                    <span>AZN</span>
+                <div class="email-area">
+                    <input type="email" name="eamil" placeholder="example@shoopiz.com" data-validation="email"
+                        data-validation-error-msg="Düzgün e-poçtu daxil edin" data-validation="required"
+                        data-validation-error-msg="E-poçtu daxil edin">
                 </div>
+
+                <div class="price-area">
+                    <div class="price-input">
+                        <label for="">Məbləğ</label>
+                        <input type="text" name="price" placeholder="" min="2" data-validation="number"
+                            data-validation-allowing="float" data-validation-error-msg-number="Rəqəm daxil edin"
+                            data-validation-error-msg="Məbləğ ən azı 1 ola bilər">
+                        <span>AZN</span>
+                    </div>
+                </div>
+
                 <div class="buttons">
                     <button class="modal_close btn-close-modal" type="button">Bağla</button>
                     <button class="btn-apply" type="submit">Təsdiqlə</button>
@@ -1721,7 +1735,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
     <script src="./assets/js/script.js"></script>

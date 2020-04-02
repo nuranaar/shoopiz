@@ -15,7 +15,7 @@
     background-color: $dark_seconr_color;
     color: #fff;
     font-size: 14px;
-    width: fit-content;
+    width: 160px;
     @include mq("phone-wide", min) {
       display: none;
     }

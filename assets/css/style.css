@@ -198,6 +198,11 @@ input.invalid + .error-message {
 .banner-container .banner {
   background-color: rgba(214, 214, 214, 0.57);
   width: 100%;
+  color: white;
+  font-size: 45px;
+  line-height: 150px;
+  text-align: center;
+  font-weight: 700;
 }
 
 .banner-container .container {
@@ -206,11 +211,19 @@ input.invalid + .error-message {
 
 @media only screen and (max-width: 768px) {
   .banner-container .banner {
-    display: none;
+    width: auto;
+    font-size: 20px;
+    line-height: 100px;
   }
   .banner-container .container {
     margin: 0 auto;
   }
+}
+
+span.help-block.form-error {
+  display: block;
+  margin: 0 !important;
+  color: #b94a48 !important;
 }
 
 .main-header {
@@ -1635,37 +1648,38 @@ footer .list {
   height: 150px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   #looking {
-    display: none;
+    margin-bottom: 6px;
+    height: 100px;
   }
 }
 
-#products {
+.products {
   text-align: center;
   margin-bottom: 32px;
 }
 
-#products .products-list {
+.products .products-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#products .products-list li {
+.products .products-list li {
   width: 100%;
 }
 
-#products .products-list li img {
+.products .products-list li img {
   width: 100%;
   height: 100%;
 }
 
-#products .main-page-more-product {
+.products .main-page-more-product {
   margin: 44px auto;
 }
 
-#products .main-page-more-product .more-btn {
+.products .main-page-more-product .more-btn {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -1725,9 +1739,7 @@ footer .list {
   background-color: #ee9221;
   color: #fff;
   font-size: 14px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 160px;
 }
 
 @media only screen and (min-width: 479px) {
@@ -3259,7 +3271,7 @@ footer .list {
   border-radius: 8px;
   color: #ee9421;
   padding: 28px 32px;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
