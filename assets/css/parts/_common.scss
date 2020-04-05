@@ -155,17 +155,11 @@ input {
     text-align: center;
     font-weight: 700;
   }
-  .container {
-    margin: 0;
-  }
   @include mq("tablet", max) {
     .banner {
       width: auto;
       font-size: 20px;
       line-height: 100px;
-    }
-    .container {
-      margin: 0 auto;
     }
   }
 }

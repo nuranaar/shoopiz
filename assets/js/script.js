@@ -497,4 +497,13 @@ $(document).ready(function () {
             $(this).prev().find(".with-more").slideToggle();
         });
     }
+
+    if ($(".more-btn").length) {
+        $(".more-btn").click(function (e) {
+            e.preventDefault();
+            $($(this).attr("href")).addClass("show");
+            $(this).parent().hide();
+            $(this).parent().parent().addClass("mb-2");
+        });
+    }
 });
