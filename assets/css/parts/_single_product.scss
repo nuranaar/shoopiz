@@ -367,7 +367,7 @@
         box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.09);
         flex-wrap: nowrap;
         .store-img {
-          width: 120px;
+          width: 100px;
         }
         .title {
           .model {
@@ -386,6 +386,7 @@
             display: inline-block;
             padding: 3px 5px 4px;
             margin-left: 0px;
+            margin-right: 30px;
             span {
               font-size: 10px;
             }
@@ -403,6 +404,7 @@
         .price {
           font-size: 10px;
           margin: 0 5px;
+          padding: 10px 10px 9px;
         }
         .more {
           font-size: 8px;

@@ -2993,7 +2993,7 @@ footer .list {
         flex-wrap: nowrap;
   }
   #pages .page-content .single-product-prise-list .store-img {
-    width: 120px;
+    width: 100px;
   }
   #pages .page-content .single-product-prise-list .title .model {
     min-width: 300px;
@@ -3008,6 +3008,7 @@ footer .list {
     display: inline-block;
     padding: 3px 5px 4px;
     margin-left: 0px;
+    margin-right: 30px;
   }
   #pages .page-content .single-product-prise-list .actions .review span {
     font-size: 10px;
@@ -3025,6 +3026,7 @@ footer .list {
   #pages .page-content .single-product-prise-list .price {
     font-size: 10px;
     margin: 0 5px;
+    padding: 10px 10px 9px;
   }
   #pages .page-content .single-product-prise-list .more {
     font-size: 8px;
