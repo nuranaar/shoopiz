@@ -21,6 +21,20 @@
       object-fit: cover;
     }
   }
+
+  @include mq("tablet-wide", max) {
+    .right {
+      width: 100%;
+      display: flex;
+    }
+    .m-12 {
+      width: 100% !important;
+    }
+
+    .m-6 {
+      width: 50% !important;
+    }
+  }
 }
 #looking {
   margin-bottom: 32px;
