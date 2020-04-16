@@ -57,6 +57,16 @@
         height: 100%;
       }
     }
+    @include mq("tablet", max) {
+      flex-wrap: wrap;
+      li.m-12 {
+        width: 100%;
+      }
+
+      li.m-6 {
+        width: 50%;
+      }
+    }
   }
   .main-page-more-product {
     margin: 44px auto;
