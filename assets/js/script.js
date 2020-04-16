@@ -19,7 +19,9 @@ $(document).ready(function () {
 
     //#region HEADER SEARCH 
     $('.search-form .search-input').focus(function () {
-        closeMobileMenu();
+        if ($(document.body).width() < 1024) {
+            closeMobileMenu();
+        }
     });
 
     $('.search-form .search-input').keyup(function () {
