@@ -592,6 +592,7 @@ span.help-block.form-error {
 @media only screen and (max-width: 1024px) {
   .second-header .header-search {
     margin: 16px 0 12px;
+    width: 11%;
   }
 }
 

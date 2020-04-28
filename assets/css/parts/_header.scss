@@ -256,11 +256,10 @@
   .header-search {
     display: flex;
     align-items: center;
-    @include mq("tablet-wide", max) {
-      // display: none;
-    }
+
     @include mq("tablet-wide", max) {
       margin: 16px 0 12px;
+      width: 11%;
     }
     .search-show {
       margin: 0 4px;
