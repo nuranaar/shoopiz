@@ -624,6 +624,9 @@ span.help-block.form-error {
 @media only screen and (max-width: 480px) {
   .second-header .header-search .search-form.show {
     width: 140px;
+    position: absolute;
+    right: 40px;
+    z-index: 99;
   }
 }
 

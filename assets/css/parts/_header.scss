@@ -282,6 +282,9 @@
         visibility: visible;
         @include mq("phone-wide", max) {
           width: 140px;
+          position: absolute;
+          right: 40px;
+          z-index: 99;
         }
       }
       input {
